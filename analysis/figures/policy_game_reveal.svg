@@ -1,0 +1,1125 @@
+
+<svg width="1400" height="1000" xmlns="http://www.w3.org/2000/svg">
+ <foreignObject width="100%" height="100%">
+   <body xmlns="http://www.w3.org/1999/xhtml">
+    <!--  -->
+    <div id="app" data-v-app=""><div id="app">
+      <div data-v-2edc2630="" class="game-container">
+        <main data-v-2edc2630="" class="main-content">
+          <section data-v-53b578be="" data-v-2edc2630="" class="scenario">
+            <div data-v-53b578be="" class="scenario-header"></div>
+            <div data-v-53b578be="" class="scenario-outer">
+                <div data-v-53b578be="" class="scenario-inner">
+                    <p>Large
+                      language models (LLMs) could transform education, scientific discovery,
+                      and more. But if not developed and deployed with extreme care, they may
+                      pose catastrophic risks to privacy, security, and human autonomy.</p>
+                    <p>There are three different proposals under consideration. They have 
+                        different attributes, including safety and control, development speed 
+                        and public trust.</p>
+                    <p>You must persuade the other player of your preferred proposal.</p>
+                    <h3>What you know</h3>
+                    <p>You have certain preferences over the attributes. (The other player is given similar, but possibly opposing, preferences.)</p>
+                    <ul>
+                      <li><strong>You dislike safety and control</strong>.</li>
+                      <li><strong>You feel indifferent to development speed</strong>.</li>
+                      <li><strong>You feel indifferent to public trust</strong>.</li>
+                    </ul>
+                    <p>The proposals will have the following effects:</p>
+                    <div class="proposals-container">
+                      <div class="proposal">
+                        <h4>Proposal <strong>A</strong></h4>
+                        <ul>
+                          <li >will <em>decrease safety and control</em></li>
+                          <li >will <em>increase development speed</em></li>
+                          <li>will <em>increase public trust</em></li>
+                        </ul>
+                      </div>
+                      <div class="proposal">
+                        <h4>Proposal <strong>B</strong></h4>
+                        <ul>
+                          <li>will <em>increase safety and control</em></li>
+                          <li >will <em>decrease development speed</em></li>
+                          <li>will <em>have no effect on public trust</em></li>
+                        </ul>
+                      </div>
+                      <div class="proposal">
+                        <h4>Proposal <strong>C</strong></h4>
+                        <ul>
+                          <li>will <em>increase safety and control</em></li>
+                          <li >will <em>increase development speed</em></li>
+                          <li>will <em>decrease public trust</em></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <p class="objective">OBJECTIVE: <strong>You want proposal A.</strong></p>
+                    <h3>What the other player knows</h3>
+                    <p>The other player has certain preferences over the attributes.</p>
+                    <ul>
+                      <li><strong>They dislike safety and control</strong>.</li>
+                      <li><strong>They dislike development speed</strong>.</li>
+                      <li><strong>They dislike public trust</strong>.</li>
+                    </ul>
+                    <div class="proposals-container">
+                      <div class="proposal">
+                        <h4>Proposal <strong>A</strong></h4>
+                        <ul>
+                          <li>will <em>increase public trust</em></li>
+                        </ul>
+                      </div>
+                      <div class="proposal">
+                        <h4>Proposal <strong>B</strong></h4>
+                        <ul>
+                          <li>will <em>increase safety and control</em></li>
+                          <li>will <em>have no effect on public trust</em></li>
+                        </ul>
+                      </div>
+                      <div class="proposal">
+                        <h4>Proposal <strong>C</strong></h4>
+                        <ul>
+                          <li>will <em>increase safety and control</em></li>
+                          <li>will <em>decrease public trust</em></li>
+                        </ul>
+                      </div>
+                    </div>
+                </div>
+            </div>
+              </section>
+            </main>
+          </div>
+        </div>
+      </div>
+
+
+      <style>
+
+        /* cyrillic-ext */
+        @font-face {
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 200;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/sourcesanspro/v22/6xKydSBYKcSV-LCoeQqfX1RYOo3i94_wmhdu3cOWxy40.woff2) format('woff2');
+        unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+        }
+        /* cyrillic */
+        @font-face {
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 200;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/sourcesanspro/v22/6xKydSBYKcSV-LCoeQqfX1RYOo3i94_wkxdu3cOWxy40.woff2) format('woff2');
+        unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+        }
+        /* greek-ext */
+        @font-face {
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 200;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/sourcesanspro/v22/6xKydSBYKcSV-LCoeQqfX1RYOo3i94_wmxdu3cOWxy40.woff2) format('woff2');
+        unicode-range: U+1F00-1FFF;
+        }
+        /* greek */
+        @font-face {
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 200;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/sourcesanspro/v22/6xKydSBYKcSV-LCoeQqfX1RYOo3i94_wlBdu3cOWxy40.woff2) format('woff2');
+        unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+        }
+        /* vietnamese */
+        @font-face {
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 200;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/sourcesanspro/v22/6xKydSBYKcSV-LCoeQqfX1RYOo3i94_wmBdu3cOWxy40.woff2) format('woff2');
+        unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+        }
+        /* latin-ext */
+        @font-face {
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 200;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/sourcesanspro/v22/6xKydSBYKcSV-LCoeQqfX1RYOo3i94_wmRdu3cOWxy40.woff2) format('woff2');
+        unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+        }
+        /* latin */
+        @font-face {
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 200;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/sourcesanspro/v22/6xKydSBYKcSV-LCoeQqfX1RYOo3i94_wlxdu3cOWxw.woff2) format('woff2');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+        /* cyrillic-ext */
+        @font-face {
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 300;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/sourcesanspro/v22/6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwmhdu3cOWxy40.woff2) format('woff2');
+        unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+        }
+        /* cyrillic */
+        @font-face {
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 300;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/sourcesanspro/v22/6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwkxdu3cOWxy40.woff2) format('woff2');
+        unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+        }
+        /* greek-ext */
+        @font-face {
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 300;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/sourcesanspro/v22/6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwmxdu3cOWxy40.woff2) format('woff2');
+        unicode-range: U+1F00-1FFF;
+        }
+        /* greek */
+        @font-face {
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 300;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/sourcesanspro/v22/6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwlBdu3cOWxy40.woff2) format('woff2');
+        unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+        }
+        /* vietnamese */
+        @font-face {
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 300;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/sourcesanspro/v22/6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwmBdu3cOWxy40.woff2) format('woff2');
+        unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+        }
+        /* latin-ext */
+        @font-face {
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 300;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/sourcesanspro/v22/6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwmRdu3cOWxy40.woff2) format('woff2');
+        unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+        }
+        /* latin */
+        @font-face {
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 300;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/sourcesanspro/v22/6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwlxdu3cOWxw.woff2) format('woff2');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+        /* cyrillic-ext */
+        @font-face {
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/sourcesanspro/v22/6xK3dSBYKcSV-LCoeQqfX1RYOo3qNa7lujVj9_mf.woff2) format('woff2');
+        unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+        }
+        /* cyrillic */
+        @font-face {
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/sourcesanspro/v22/6xK3dSBYKcSV-LCoeQqfX1RYOo3qPK7lujVj9_mf.woff2) format('woff2');
+        unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+        }
+        /* greek-ext */
+        @font-face {
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/sourcesanspro/v22/6xK3dSBYKcSV-LCoeQqfX1RYOo3qNK7lujVj9_mf.woff2) format('woff2');
+        unicode-range: U+1F00-1FFF;
+        }
+        /* greek */
+        @font-face {
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/sourcesanspro/v22/6xK3dSBYKcSV-LCoeQqfX1RYOo3qO67lujVj9_mf.woff2) format('woff2');
+        unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+        }
+        /* vietnamese */
+        @font-face {
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/sourcesanspro/v22/6xK3dSBYKcSV-LCoeQqfX1RYOo3qN67lujVj9_mf.woff2) format('woff2');
+        unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+        }
+        /* latin-ext */
+        @font-face {
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/sourcesanspro/v22/6xK3dSBYKcSV-LCoeQqfX1RYOo3qNq7lujVj9_mf.woff2) format('woff2');
+        unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+        }
+        /* latin */
+        @font-face {
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/sourcesanspro/v22/6xK3dSBYKcSV-LCoeQqfX1RYOo3qOK7lujVj9w.woff2) format('woff2');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+        /* cyrillic-ext */
+        @font-face {
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 600;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/sourcesanspro/v22/6xKydSBYKcSV-LCoeQqfX1RYOo3i54rwmhdu3cOWxy40.woff2) format('woff2');
+        unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+        }
+        /* cyrillic */
+        @font-face {
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 600;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/sourcesanspro/v22/6xKydSBYKcSV-LCoeQqfX1RYOo3i54rwkxdu3cOWxy40.woff2) format('woff2');
+        unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+        }
+        /* greek-ext */
+        @font-face {
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 600;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/sourcesanspro/v22/6xKydSBYKcSV-LCoeQqfX1RYOo3i54rwmxdu3cOWxy40.woff2) format('woff2');
+        unicode-range: U+1F00-1FFF;
+        }
+        /* greek */
+        @font-face {
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 600;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/sourcesanspro/v22/6xKydSBYKcSV-LCoeQqfX1RYOo3i54rwlBdu3cOWxy40.woff2) format('woff2');
+        unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+        }
+        /* vietnamese */
+        @font-face {
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 600;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/sourcesanspro/v22/6xKydSBYKcSV-LCoeQqfX1RYOo3i54rwmBdu3cOWxy40.woff2) format('woff2');
+        unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+        }
+        /* latin-ext */
+        @font-face {
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 600;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/sourcesanspro/v22/6xKydSBYKcSV-LCoeQqfX1RYOo3i54rwmRdu3cOWxy40.woff2) format('woff2');
+        unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+        }
+        /* latin */
+        @font-face {
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 600;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/sourcesanspro/v22/6xKydSBYKcSV-LCoeQqfX1RYOo3i54rwlxdu3cOWxw.woff2) format('woff2');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+        /* cyrillic-ext */
+        @font-face {
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/sourcesanspro/v22/6xKydSBYKcSV-LCoeQqfX1RYOo3ig4vwmhdu3cOWxy40.woff2) format('woff2');
+        unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+        }
+        /* cyrillic */
+        @font-face {
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/sourcesanspro/v22/6xKydSBYKcSV-LCoeQqfX1RYOo3ig4vwkxdu3cOWxy40.woff2) format('woff2');
+        unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+        }
+        /* greek-ext */
+        @font-face {
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/sourcesanspro/v22/6xKydSBYKcSV-LCoeQqfX1RYOo3ig4vwmxdu3cOWxy40.woff2) format('woff2');
+        unicode-range: U+1F00-1FFF;
+        }
+        /* greek */
+        @font-face {
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/sourcesanspro/v22/6xKydSBYKcSV-LCoeQqfX1RYOo3ig4vwlBdu3cOWxy40.woff2) format('woff2');
+        unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+        }
+        /* vietnamese */
+        @font-face {
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/sourcesanspro/v22/6xKydSBYKcSV-LCoeQqfX1RYOo3ig4vwmBdu3cOWxy40.woff2) format('woff2');
+        unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+        }
+        /* latin-ext */
+        @font-face {
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/sourcesanspro/v22/6xKydSBYKcSV-LCoeQqfX1RYOo3ig4vwmRdu3cOWxy40.woff2) format('woff2');
+        unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+        }
+        /* latin */
+        @font-face {
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/sourcesanspro/v22/6xKydSBYKcSV-LCoeQqfX1RYOo3ig4vwlxdu3cOWxw.woff2) format('woff2');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+        /* cyrillic-ext */
+        @font-face {
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 900;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/sourcesanspro/v22/6xKydSBYKcSV-LCoeQqfX1RYOo3iu4nwmhdu3cOWxy40.woff2) format('woff2');
+        unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+        }
+        /* cyrillic */
+        @font-face {
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 900;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/sourcesanspro/v22/6xKydSBYKcSV-LCoeQqfX1RYOo3iu4nwkxdu3cOWxy40.woff2) format('woff2');
+        unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+        }
+        /* greek-ext */
+        @font-face {
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 900;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/sourcesanspro/v22/6xKydSBYKcSV-LCoeQqfX1RYOo3iu4nwmxdu3cOWxy40.woff2) format('woff2');
+        unicode-range: U+1F00-1FFF;
+        }
+        /* greek */
+        @font-face {
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 900;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/sourcesanspro/v22/6xKydSBYKcSV-LCoeQqfX1RYOo3iu4nwlBdu3cOWxy40.woff2) format('woff2');
+        unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+        }
+        /* vietnamese */
+        @font-face {
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 900;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/sourcesanspro/v22/6xKydSBYKcSV-LCoeQqfX1RYOo3iu4nwmBdu3cOWxy40.woff2) format('woff2');
+        unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+        }
+        /* latin-ext */
+        @font-face {
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 900;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/sourcesanspro/v22/6xKydSBYKcSV-LCoeQqfX1RYOo3iu4nwmRdu3cOWxy40.woff2) format('woff2');
+        unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+        }
+        /* latin */
+        @font-face {
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 900;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/sourcesanspro/v22/6xKydSBYKcSV-LCoeQqfX1RYOo3iu4nwlxdu3cOWxw.woff2) format('woff2');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+      </style>
+      <style>
+        body{
+        font-family:Source Sans Pro,sans-serif;
+        margin:0;
+        padding:0;
+        font-weight:300;
+        font-size:20px
+        }
+        *{
+        margin:0;
+        box-sizing:border-box
+        }
+        .container{
+        min-height:100vh;
+        display:flex;
+        flex-direction:column
+        }
+        .header{
+        width:100%;
+        background-color:#c2e9ec;
+        color:#fff;
+        text-align:left;
+        padding:10px 0 10px 25px;
+        font-weight:700
+        }
+        .main-content{
+        flex-grow:1;
+        display:flex;
+        justify-content:center;
+        align-items:center
+        }
+        .content-wrapper{
+        background-color:#fff;
+        padding:40px;
+        max-width:800px;
+        width:90%;
+        text-align:center
+        }
+        h1{
+        font-weight:300;
+        color:#13494d;
+        font-size:1.8em
+        }
+        h2{
+        font-weight:500;
+        margin-bottom:16px;
+        font-size:1.5em
+        }
+        p{
+        margin-top:12px;
+        margin-bottom:12px;
+        line-height:1.6;
+        font-size:1em;
+        text-align:justify
+        }
+        button{
+        background-color:#c2e9ec;
+        color:#12494d;
+        border:none;
+        padding:12px 24px;
+        font-size:16px;
+        border-radius:4px;
+        cursor:pointer
+        }
+        button:hover{
+        background-color:#12494d;
+        color:#fff
+        }
+        blockquote{
+        margin:1.5em 0;
+        padding:1em 1.5em;
+        border-left:3px solid #666;
+        background-color:#fafafa;
+        font-size:.95em;
+        color:#444;
+        text-align:justify
+        }
+        .proposal{
+        padding:10px;
+        box-shadow:1px 1px 3px 1px #0003;
+        margin:2px;
+        border-radius:10px;
+        height:fit-content
+        }
+        .scenario-inner ul{
+        margin-bottom:10px;
+        margin-top:10px
+        }
+        .scenario-inner li{
+        padding:4px
+        }
+        .proposal h4{
+        margin-bottom:10px;
+        font-weight:500
+        }
+        .proposals-container{
+        display:flex;
+        flex-flow:wrap;
+        height:90%
+        }
+        .objective{
+        text-align:center;
+        font-size:larger
+        }
+        button[data-v-1e6da245]:disabled{
+        cursor:not-allowed;
+        opacity:.7
+        }
+        .likert-scale[data-v-cfb35967]{
+        display:flex;
+        justify-content:space-between;
+        margin-bottom:1em
+        }
+        .likert-option[data-v-cfb35967]{
+        display:flex;
+        flex-direction:column;
+        align-items:center
+        }
+        .likert-option input[type=radio][data-v-cfb35967]{
+        margin-bottom:.5em
+        }
+        .scenario[data-v-53b578be]{
+        width:40%;
+        /*  padding:20px;*/
+        border-radius:8px;
+        flex:1;
+        font-size:17px;
+        <!-- height:calc(100% - 25px); -->
+        overflow:hidden;
+        max-width:1000px
+        }
+        .scenario-outer[data-v-53b578be]{
+        height:100%;
+        /*  overflow-y:scroll;*/
+        padding-bottom:40px;
+        padding-right:20px
+        }
+        .scenario-inner[data-v-53b578be]{
+        padding-bottom:20px
+        }
+        .scenario-header[data-v-53b578be]{
+        display:flex;
+        justify-content:space-between
+        }
+        .scenario-tabs-container[data-v-53b578be]{
+        display:flex;
+        align-items:center
+        }
+        .scenario-tab[data-v-53b578be]{
+        background:#828282;
+        color:#fff;
+        height:fit-content;
+        padding:1px 10px;
+        border-radius:8px;
+        margin:5px 2px;
+        cursor:pointer
+        }
+        .scenario-tab.selected[data-v-53b578be]{
+        background:#c2e9ec;
+        color:#12494d
+        }
+        .scenario-tab[data-v-53b578be]:hover{
+        background:#3f3f3f
+        }
+        .scenario-tab.selected[data-v-53b578be]:hover{
+        background:#12494d;
+        color:#fff
+        }
+        h4[data-v-53b578be]{
+        font-weight:500;
+        margin-top:20px
+        }
+        .values-container[data-v-53b578be]{
+        display:flex;
+        flex-wrap:wrap
+        }
+        span.value[data-v-53b578be]{
+        padding:10px
+        }
+        td[data-v-53b578be],th[data-v-53b578be]{
+        padding:15px;
+        text-align:center;
+        font-size:24px;
+        margin:0
+        }
+        tbody th[data-v-53b578be]{
+        text-align:right;
+        font-variant:titling-caps;
+        font-variant-caps:all-small-caps
+        }
+        td.you[data-v-53b578be]{
+        border-left:1px solid black;
+        border-collapse:collapse
+        }
+        table[data-v-53b578be]{
+        border-collapse:collapse
+        }
+        thead th[data-v-53b578be]{
+        border-bottom:1px solid black
+        }
+        th[data-v-53b578be]{
+        font-weight:500
+        }
+        th.you[data-v-53b578be]{
+        border-left:1px solid black
+        }
+        section.chat[data-v-0d6b1a89]{
+        flex:1;
+        /*  padding:20px;*/
+        display:flex;
+        flex-direction:column;
+        max-width:400px;
+        height:100%
+        }
+        .chat-header[data-v-0d6b1a89]{
+        display:flex;
+        justify-content:space-between
+        }
+        button.decide-button[data-v-0d6b1a89]{
+        padding:19px 20px;
+        height:30px;
+        line-height:0px
+        }
+        .chat-window[data-v-0d6b1a89]{
+        min-height:400px;
+        height:100%;
+        /*  overflow-y:scroll;*/
+        padding-right:20px
+        }
+        .chat-input[data-v-0d6b1a89]{
+        display:flex;
+        align-items:end;
+        justify-content:space-between;
+        background:black;
+        padding:10px
+        }
+        .chat-input textarea[data-v-0d6b1a89]{
+        flex:1;
+        height:40px;
+        background:#373636;
+        box-shadow:none;
+        border:none;
+        color:#fff;
+        resize:none;
+        overflow:hidden;
+        max-height:80px;
+        line-height:20px;
+        height:auto;
+        width:100%;
+        padding:10px;
+        font-family:Source Sans Pro,sans-serif
+        }
+        .chat-input button[data-v-0d6b1a89]{
+        height:40px;
+        width:40px;
+        padding:5px;
+        border-radius:20px;
+        border:none;
+        cursor:pointer
+        }
+        #thought-input[data-v-0d6b1a89]{
+        border-top-left-radius:20px;
+        border-top-right-radius:20px;
+        border-bottom:3px dashed #555
+        }
+        #chat-input[data-v-0d6b1a89]:not(.single-input){
+        border-bottom-left-radius:20px;
+        border-bottom-right-radius:20px
+        }
+        .textareas-row[data-v-0d6b1a89]{
+        display:flex;
+        align-items:center;
+        flex-direction:column;
+        width:100%;
+        margin:0 13px
+        }
+        .single-input[data-v-0d6b1a89]{
+        border-radius:20px!important
+        }
+        button img[data-v-0d6b1a89]{
+        width:30px;
+        height:30px
+        }
+        #send-button[data-v-0d6b1a89]{
+        background-color:#007bff;
+        color:#fff;
+        padding-left:7px
+        }
+        #send-button[data-v-0d6b1a89]:hover{
+        background-color:#0056b3
+        }
+        #send-button[data-v-0d6b1a89]:disabled{
+        background-color:#5e7a98;
+        cursor:not-allowed
+        }
+        button#gavel-button[data-v-0d6b1a89]{
+        background-color:orange
+        }
+        button#gavel-button[data-v-0d6b1a89]:hover{
+        background-color:#e57d05
+        }
+        .message[data-v-0d6b1a89]{
+        max-width:90%;
+        width:fit-content;
+        font-weight:300;
+        padding:8px 16px;
+        border-radius:10px;
+        margin-bottom:20px;
+        word-wrap:break-word;
+        white-space:pre-wrap;
+        line-height:1.4;
+        position:relative;
+        font-size:16px;
+        box-shadow:0 1px 2px #0000001a
+        }
+        .message-left[data-v-0d6b1a89]{
+        background-color:#333;
+        color:#fff
+        }
+        .message-right[data-v-0d6b1a89]{
+        background-color:#e0f7fa;
+        margin-left:auto
+        }
+        p.character-count[data-v-0d6b1a89]{
+        margin-bottom:0;
+        float:right;
+        font-size:16px
+        }
+        p.character-count.warning[data-v-0d6b1a89]{
+        color:red
+        }
+        .typing[data-v-0d6b1a89]{
+        align-items:center;
+        display:flex;
+        height:17px;
+        margin-top:5px
+        }
+        .typing .dot[data-v-0d6b1a89]{
+        animation:mercuryTypingAnimation-0d6b1a89 1.8s infinite ease-in-out;
+        background-color:#666;
+        border-radius:50%;
+        height:7px;
+        margin-right:4px;
+        vertical-align:middle;
+        width:7px;
+        display:inline-block
+        }
+        .typing .dot[data-v-0d6b1a89]:nth-child(1){
+        animation-delay:.2s
+        }
+        .typing .dot[data-v-0d6b1a89]:nth-child(2){
+        animation-delay:.3s
+        }
+        .typing .dot[data-v-0d6b1a89]:nth-child(3){
+        animation-delay:.4s
+        }
+        .typing .dot[data-v-0d6b1a89]:last-child{
+        margin-right:0
+        }
+        @keyframes mercuryTypingAnimation-0d6b1a89{
+        0%{
+        transform:translateY(0);
+        background-color:#666
+        }
+        28%{
+        transform:translateY(-7px);
+        background-color:#888
+        }
+        44%{
+        transform:translateY(0);
+        background-color:#666
+        }
+        }
+        .overlay[data-v-3cfb3fbe]{
+        position:fixed;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        background:rgba(0,0,0,.5);
+        display:flex;
+        justify-content:center;
+        align-items:center
+        }
+        .overlay-content[data-v-3cfb3fbe]{
+        background:white;
+        padding:20px;
+        border-radius:8px;
+        display:flex;
+        flex-direction:column
+        }
+        #decide-button-container[data-v-3cfb3fbe]{
+        display:flex;
+        justify-content:space-between;
+        margin-top:20px
+        }
+        #close-button[data-v-3cfb3fbe],#decide-button[data-v-3cfb3fbe]{
+        padding:12px 24px;
+        font-size:16px;
+        border-radius:4px;
+        cursor:pointer;
+        width:100%;
+        margin-left:2px;
+        margin-right:2px
+        }
+        #close-button[data-v-3cfb3fbe]{
+        background-color:#f44336;
+        color:#fff
+        }
+        #decide-button[data-v-3cfb3fbe]{
+        background-color:#4caf50;
+        color:#fff
+        }
+        #decide-button[data-v-3cfb3fbe]:disabled{
+        background-color:gray;
+        cursor:not-allowed
+        }
+        .choice-buttons[data-v-3cfb3fbe]{
+        display:flex;
+        justify-content:space-between;
+        margin-bottom:20px
+        }
+        .choice-buttons button[data-v-3cfb3fbe]{
+        background-color:#d3d3d3;
+        padding:12px 24px;
+        border:none;
+        border-radius:4px;
+        font-size:16px;
+        cursor:pointer
+        }
+        .choice-buttons button[data-v-3cfb3fbe]:hover{
+        background-color:#a9a9a9
+        }
+        .choice-buttons button.selected[data-v-3cfb3fbe]{
+        background-color:#0065d8;
+        color:#fff
+        }
+        .choice-buttons button.selected[data-v-3cfb3fbe]:hover{
+        background-color:#10f;
+        color:#fff
+        }
+        .continue-btn[data-v-3cfb3fbe]{
+        margin-left:auto
+        }
+        .success h2[data-v-3cfb3fbe]{
+        color:#4caf50
+        }
+        .failure h2[data-v-3cfb3fbe]{
+        color:#f44336
+        }
+        .decide-subtitle[data-v-3cfb3fbe]{
+        font-size:1.1em;
+        margin-bottom:20px;
+        color:#444;
+        font-style:italic
+        }
+        .overlay[data-v-78eebddb]{
+        position:fixed;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        background:rgba(0,0,0,.5);
+        display:flex;
+        justify-content:center;
+        align-items:center
+        }
+        .overlay-content[data-v-78eebddb]{
+        background:white;
+        padding:20px;
+        border-radius:8px;
+        display:flex;
+        flex-direction:column
+        }
+        #decide-button-container[data-v-78eebddb]{
+        display:flex;
+        justify-content:space-between;
+        margin-top:20px
+        }
+        #close-button[data-v-78eebddb],#decide-button[data-v-78eebddb]{
+        padding:12px 24px;
+        font-size:16px;
+        border-radius:4px;
+        cursor:pointer
+        }
+        #close-button[data-v-78eebddb]{
+        background-color:#f44336;
+        color:#fff
+        }
+        #decide-button[data-v-78eebddb]{
+        background-color:#4caf50;
+        color:#fff
+        }
+        #decide-button[data-v-78eebddb]:disabled{
+        background-color:gray;
+        cursor:not-allowed
+        }
+        .choice-buttons[data-v-78eebddb]{
+        display:flex;
+        justify-content:space-between;
+        margin-bottom:20px
+        }
+        .choice-buttons button[data-v-78eebddb]{
+        background-color:#d3d3d3;
+        padding:12px 24px;
+        border:none;
+        border-radius:4px;
+        font-size:16px;
+        cursor:pointer
+        }
+        .choice-buttons button[data-v-78eebddb]:hover{
+        background-color:#a9a9a9
+        }
+        .choice-buttons button.selected[data-v-78eebddb]{
+        background-color:#0065d8;
+        color:#fff
+        }
+        .choice-buttons button.selected[data-v-78eebddb]:hover{
+        background-color:#10f;
+        color:#fff
+        }
+        .continue-btn[data-v-78eebddb]{
+        margin-left:auto
+        }
+        .success h2[data-v-78eebddb]{
+        color:#4caf50
+        }
+        .failure h2[data-v-78eebddb]{
+        color:#f44336
+        }
+        .decide-subtitle[data-v-78eebddb]{
+        font-size:1.1em;
+        margin-bottom:20px;
+        color:#444;
+        font-style:italic
+        }
+        .overlay[data-v-e6cec51f]{
+        position:fixed;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        background:rgba(0,0,0,.5);
+        display:flex;
+        justify-content:center;
+        align-items:center
+        }
+        .overlay-content[data-v-e6cec51f]{
+        background:white;
+        padding:20px;
+        border-radius:8px;
+        width:80%;
+        max-width:600px
+        }
+        #button-container[data-v-e6cec51f]{
+        display:flex;
+        justify-content:space-between;
+        margin-top:20px
+        }
+        #close-button[data-v-e6cec51f]{
+        padding:12px 24px;
+        font-size:16px;
+        border-radius:4px;
+        cursor:pointer;
+        margin-left:auto
+        }
+        .header[data-v-2edc2630]{
+        display:flex;
+        justify-content:space-between
+        }
+        .round-info[data-v-2edc2630]{
+        display:flex;
+        flex-direction:column;
+        align-items:end;
+        padding-right:20px;
+        color:#12494d;
+        font-weight:300
+        }
+        .main-content[data-v-2edc2630]{
+        display:flex;
+        justify-content:space-between;
+        padding:0 20px;
+        align-items:baseline;
+        <!-- height:calc(100vh - 70px); -->
+        overflow:hidden
+        }
+        h2[data-v-2edc2630]{
+        margin-bottom:16px;
+        font-size:1.5em;
+        color:#333;
+        font-weight:500
+        }
+        .waiting[data-v-4bb3b871]{
+        text-align:center
+        }
+        .content-wrapper[data-v-645a837c]{
+        background-color:#fff;
+        padding:40px;
+        max-width:800px;
+        width:90%;
+        text-align:center;
+        display:flex;
+        flex-direction:column
+        }
+        textarea.feedback[data-v-645a837c]{
+        width:80%;
+        margin:auto auto 20px;
+        height:150px;
+        padding:12px 20px;
+        box-sizing:border-box;
+        border:1px solid #ccc;
+        border-radius:4px;
+        font-size:16px;
+        resize:none;
+        overflow-y:auto;
+        font-family:Source Sans Pro;
+        display:block
+        }
+        button[data-v-645a837c]{
+        background-color:#c2e9ec;
+        color:#12494d;
+        border:none;
+        padding:12px 24px;
+        font-size:16px;
+        border-radius:4px;
+        cursor:pointer;
+        margin-left:auto
+        }
+        .error[data-v-aa13de10]{
+        color:red;
+        margin-top:10px
+        }
+        .not-found[data-v-35ef0710]{
+        text-align:center;
+        margin-top:50px
+        }
+
+        .unseen {
+        color: red;
+        font-weight: lighter;
+        font-style: italic;
+
+        }
+        @tailwind base;
+        @tailwind components;
+        @tailwind utilities;
+      </style>
+      <!--  -->
+    </body>
+  </foreignObject>
+</svg>

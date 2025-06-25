@@ -1,0 +1,24 @@
+*.pyc
+*.ipynb_checkpoints
+env/
+env-mindgames/
+*__pycache__*
+*.DS_Store
+src/mindgames.egg-info/ 
+*.gantry
+outputs/
+# Hydra
+old/
+gcp_credentials.json
+database.db
+*pytest_cache*
+frontend/node_modules/
+frontend/dist/
+frontend/*.log
+package-lock.json
+logs/
+bonuses.csv
+*#*
+*.eslintcache*
+main.log
+experiment_data/

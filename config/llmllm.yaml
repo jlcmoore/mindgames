@@ -1,0 +1,42 @@
+# NB: could specify these
+temperature: 1 # Setting the temperature to 1 to equalize as o3 only accepts 1
+round_conditions:
+  - "solution"
+  # - "can-win"
+  # - "never-win"
+  # - "always-win"
+num_unique_payoffs_per_round_condition: 20
+num_unique_scenarios_per_payoff: 1
+turn_limit: 8
+model_to_args:
+  meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo:
+    source: "together"
+    retrying: True
+  meta-llama/Meta-Llama-3.1-405B-Instruct-Turbo:
+    source: "together"
+    retrying: True
+  o1-preview-2024-09-12:
+    source: "openai"
+    retrying: False
+  deepseek-ai/DeepSeek-R1:
+    source: "together"
+    temperature: 0.6
+    retrying: True
+conditions:
+  # Rational llm_target, with no revealed beliefs and with both revealed
+  - llm_persuader: 'o1-preview-2024-09-12'
+    llm_target: null # rational target
+    allow_lying: False
+    targets_values: False
+    reveal_motivation: True
+    reveal_belief: True
+    add_hint: False
+    perfect_game: False
+  # Rational target with nothing revealed to the persuader, they have to ask
+  - llm_persuader: 'o1-preview-2024-09-12'
+    llm_target: null # rational target
+    allow_lying: False
+    targets_values: False
+    reveal_motivation: False
+    reveal_belief: False
+    add_hint: False

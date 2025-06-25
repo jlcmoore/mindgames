@@ -1,0 +1,198 @@
+---
+title: "E1 Analysis with mixed effect models"
+output:
+  html_document:
+    toc: yes
+    toc_float: true
+    theme: flatly
+    highlight: kate
+    code_folding: hide
+date: "2025-01-15"
+---
+
+# Setup
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(lmerTest)
+
+data <- read.csv("data/games_e1.csv") %>%
+  mutate(
+    scenario = as.factor(scenario),
+    persuader_type = as.factor(persuader_type),
+    mental_state = as.factor(mental_state),
+    participant_id = as.factor(participant_id),
+  )
+  
+```
+
+# Descriptive
+
+## Summary
+
+```{r}
+
+summary(data)
+
+```
+
+## No games per condition
+
+```{r}
+
+data %>%
+  group_by(persuader_type, mental_state) %>%
+  summarize(n_games = n())
+
+```
+
+## No ppts per condition
+
+```{r}
+
+data %>%
+  group_by(persuader_type, mental_state) %>%
+  summarize(n_ppts = n_distinct(participant_id))
+
+```
+
+## Results
+
+```{r}
+
+data %>%
+  group_by(persuader_type, mental_state) %>%
+  summarize(n_ppts = n_distinct(participant_id), success = round(mean(success), 3))
+
+```
+
+
+# H1
+
+For H1 we’re asking “Is the human success rate in the no_reveal condition significantly greater than 0.1”? 
+
+The effect does not hold in a mixed effects model w/ random intercept by ppt (p = 0.1)
+
+```{r}
+
+chance_prob <- 0.1
+chance_logodds <- qlogis(chance_prob)
+
+model_data <- data %>%
+  filter(persuader_type == "human", 
+         mental_state == "Hidden") %>%
+  # Add offset column
+  mutate(offset_term = chance_logodds)
+
+model <- glmer(success ~ offset(offset_term) + 1 + (1 | scenario),
+               family = binomial, 
+               data = model_data)
+
+summary(model)
+
+```
+
+# H2
+
+For H2 we're asking "do human ppts perform significantly better in reveal vs no_reveal".
+
+The effect is directionally positive but not significant.
+
+```{r}
+
+model_data <- data %>%
+  filter(persuader_type == "human")
+
+model <- glmer(success ~ mental_state + (1 | scenario), 
+             family = binomial, 
+             data = model_data)
+
+summary(model)
+
+```
+
+# H3
+
+```{r}
+
+chance_prob <- 0.1
+chance_logodds <- qlogis(chance_prob)
+
+model_data <- data %>%
+  filter(persuader_type == "o1-preview", 
+         mental_state == "Hidden") %>%
+  # Add offset column
+  mutate(offset_term = chance_logodds)
+
+model <- glmer(success ~ offset(offset_term) + 1 + (1 | scenario),
+               family = binomial, 
+               data = model_data)
+
+summary(model)
+
+```
+
+# H4
+
+
+```{r}
+
+model_data <- data %>%
+  filter(persuader_type == "o1-preview")
+
+model <- glmer(success ~ mental_state + (1 | scenario), 
+             family = binomial, 
+             data = model_data)
+
+summary(model)
+
+```
+
+
+# H5
+
+```{r}
+
+model_data <- data %>%
+  filter(mental_state == "Hidden")
+
+model <- glmer(success ~ persuader_type + (1 | scenario), 
+             family = binomial, 
+             data = model_data)
+
+summary(model)
+
+```
+
+
+# H6
+
+```{r}
+
+model_data <- data %>%
+  filter(mental_state == "Revealed")
+
+model <- glmer(success ~ persuader_type + (1 | scenario), 
+             family = binomial, 
+             data = model_data)
+
+summary(model)
+
+```
+
+
+# H7
+
+
+```{r}
+
+model_data <- data
+
+model <- glmer(success ~ persuader_type * mental_state + (1 | scenario), 
+             family = binomial, 
+             data = model_data)
+
+summary(model)
+
+```

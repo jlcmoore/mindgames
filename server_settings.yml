@@ -1,0 +1,195 @@
+# Define optional arguments to change the default server settings,
+# defined in `src/api/utils.py::ServerSettings`
+turn_limit: 1
+round_conditions: {"solution" : 2}
+add_hint: False
+completion_code: "C1A05H75"
+dev_environment: True
+non_mental: False
+background_tasks: True
+chain_of_thought: False
+overassign_non_paired_conditions: False
+conditions:
+  # Revealed, o3 persuader human target
+  - condition:
+      allow_lying: False
+      targets_values: False
+      reveal_motivation: True
+      reveal_belief: True
+      add_hint: False
+    roles:
+      llm_persuader: null
+      llm_target: null
+      human_persuader: True
+      human_target: True
+    count: 250
+  - condition:
+      allow_lying: False
+      targets_values: False
+      reveal_motivation: True
+      reveal_belief: True
+      add_hint: False
+    roles:
+      llm_persuader: 'gpt-4o-mini'
+      llm_target: null
+      human_persuader: False
+      human_target: True
+    count: 250    
+  # # Revealed, o3 persuader human target
+  # - condition:
+  #     allow_lying: False
+  #     targets_values: False
+  #     reveal_motivation: True
+  #     reveal_belief: True
+  #     add_hint: False
+  #   roles:
+  #     llm_persuader: 'o3-2025-04-16'
+  #     llm_target: null
+  #     human_persuader: False
+  #     human_target: True
+  #   count: 250
+  # # Hidden, o3 persuader human target
+  # - condition:
+  #     allow_lying: False
+  #     targets_values: False
+  #     reveal_motivation: False
+  #     reveal_belief: False
+  #     add_hint: False
+  #   roles:
+  #     llm_persuader: 'o3-2025-04-16'
+  #     llm_target: null
+  #     human_persuader: False
+  #     human_target: True
+  #   count: 250
+  # # Revealed, human persuader human target
+  # - condition:
+  #     allow_lying: False
+  #     targets_values: False
+  #     reveal_motivation: True
+  #     reveal_belief: True
+  #     add_hint: False
+  #   roles:
+  #     llm_persuader: null
+  #     llm_target: null
+  #     human_persuader: True
+  #     human_target: True
+  #   count: 250
+  # # Hidden, human persuader human target
+  # - condition:
+  #     allow_lying: False
+  #     targets_values: False
+  #     reveal_motivation: False
+  #     reveal_belief: False
+  #     add_hint: False
+  #   roles:
+  #     llm_persuader: null
+  #     llm_target: null
+  #     human_persuader: True
+  #     human_target: True
+  #   count: 250
+
+
+  # # Human - Human w/ value function -- reveal
+  # - condition:
+  #     allow_lying: False
+  #     targets_values: False
+  #     reveal_motivation: True
+  #     reveal_belief: True
+  #     add_hint: False
+  #   roles:
+  #     llm_persuader: null
+  #     llm_target: null
+  #     human_persuader: True
+  #     human_target: True
+  #   count: 40
+  # # Human - Human w/ value function -- no reveal
+  # - condition:
+  #     allow_lying: False
+  #     targets_values: False
+  #     reveal_motivation: False
+  #     reveal_belief: False
+  #     add_hint: False
+  #   roles:
+  #     llm_persuader: null
+  #     llm_target: null
+  #     human_persuader: True
+  #     human_target: True
+  #   count: 40
+  # # GPT-4o - human w/ value function -- reveal
+  # - condition:
+  #     allow_lying: False
+  #     targets_values: False
+  #     reveal_motivation: True
+  #     reveal_belief: True
+  #     add_hint: False
+  #   roles:
+  #     llm_persuader: 'gpt-4o'
+  #     llm_target: null
+  #     human_persuader: False
+  #     human_target: True
+  #   count: 40
+  # # GPT-4o - human w/ value function -- no reveal
+  # - condition:
+  #     allow_lying: False
+  #     targets_values: False
+  #     reveal_motivation: False
+  #     reveal_belief: False
+  #     add_hint: False
+  #   roles:
+  #     llm_persuader: 'gpt-4o'
+  #     llm_target: null
+  #     human_persuader: False
+  #     human_target: True
+  #   count: 40
+  # # Human - Human w/ own value function -- reveal
+  # - condition:
+  #     allow_lying: False
+  #     targets_values: True
+  #     reveal_motivation: True
+  #     reveal_belief: True
+  #     add_hint: False
+  #   roles:
+  #     llm_persuader: null
+  #     llm_target: null
+  #     human_persuader: True
+  #     human_target: True
+  #   count: 40
+  # # Human - Human w/ own value function -- no reveal
+  # - condition:
+  #     allow_lying: False
+  #     targets_values: True
+  #     reveal_motivation: False
+  #     reveal_belief: False
+  #     add_hint: False
+  #   roles:
+  #     llm_persuader: null
+  #     llm_target: null
+  #     human_persuader: True
+  #     human_target: True
+  #   count: 40
+  # # GPT-4o - Human w/ own value function -- reveal
+  # - condition:
+  #     allow_lying: False
+  #     targets_values: True
+  #     reveal_motivation: True
+  #     reveal_belief: True
+  #     add_hint: False
+  #   roles:
+  #     llm_persuader: 'gpt-4o'
+  #     llm_target: null
+  #     human_persuader: False
+  #     human_target: True
+  #   count: 40
+  # # GPT-4o - Human w/ own value function -- no reveal
+  # - condition:
+  #     allow_lying: False
+  #     targets_values: True
+  #     reveal_motivation: False
+  #     reveal_belief: False
+  #     add_hint: False
+  #   roles:
+  #     llm_persuader: 'gpt-4o'
+  #     llm_target: null
+  #     human_persuader: False
+  #     human_target: True
+  #   count: 40

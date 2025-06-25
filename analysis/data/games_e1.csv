@@ -1,0 +1,802 @@
+persuader_type,mental_state,participant_id,scenario,trial_num,success,persuasion_success,appeals_success,appeals_success_no_inferential
+o1-preview,Hidden,999,llms,0,0,0,0,0
+o1-preview,Hidden,999,lunar governance,1,0,0,0,0
+o1-preview,Hidden,999,coastal energy innovation,2,0,0,0,0
+o1-preview,Hidden,999,education overhaul,3,0,0,0,0
+o1-preview,Hidden,999,meatless lunch,4,0,0,1,0
+o1-preview,Hidden,999,llms,5,0,0,0,0
+o1-preview,Hidden,999,lunar governance,6,0,0,0,0
+o1-preview,Hidden,999,coastal energy innovation,7,0,0,0,0
+o1-preview,Hidden,999,education overhaul,8,0,0,0,0
+o1-preview,Hidden,999,meatless lunch,9,1,1,0,0
+o1-preview,Hidden,999,llms,10,1,1,0,0
+o1-preview,Hidden,999,lunar governance,11,0,0,0,0
+o1-preview,Hidden,999,coastal energy innovation,12,0,0,0,0
+o1-preview,Hidden,999,education overhaul,13,0,0,0,0
+o1-preview,Hidden,999,meatless lunch,14,1,1,0,0
+o1-preview,Hidden,999,llms,15,0,0,0,0
+o1-preview,Hidden,999,lunar governance,16,0,0,0,0
+o1-preview,Hidden,999,coastal energy innovation,17,1,1,0,0
+o1-preview,Hidden,999,education overhaul,18,0,0,0,0
+o1-preview,Hidden,999,meatless lunch,19,0,0,0,0
+o1-preview,Hidden,999,llms,20,0,0,0,0
+o1-preview,Hidden,999,lunar governance,21,0,0,0,0
+o1-preview,Hidden,999,coastal energy innovation,22,0,0,0,0
+o1-preview,Hidden,999,education overhaul,23,0,0,0,0
+o1-preview,Hidden,999,meatless lunch,24,0,0,0,0
+o1-preview,Hidden,999,llms,25,0,0,0,0
+o1-preview,Hidden,999,lunar governance,26,0,0,0,0
+o1-preview,Hidden,999,coastal energy innovation,27,0,0,0,0
+o1-preview,Hidden,999,education overhaul,28,0,0,1,0
+o1-preview,Hidden,999,meatless lunch,29,0,0,0,0
+o1-preview,Hidden,999,llms,30,0,0,0,0
+o1-preview,Hidden,999,lunar governance,31,0,0,0,0
+o1-preview,Hidden,999,coastal energy innovation,32,0,0,0,0
+o1-preview,Hidden,999,education overhaul,33,0,0,0,0
+o1-preview,Hidden,999,meatless lunch,34,0,0,0,0
+o1-preview,Hidden,999,llms,35,1,1,0,0
+o1-preview,Hidden,999,lunar governance,36,1,1,0,0
+o1-preview,Hidden,999,coastal energy innovation,37,0,0,0,0
+o1-preview,Hidden,999,education overhaul,38,0,0,0,0
+o1-preview,Hidden,999,meatless lunch,39,0,0,0,0
+o1-preview,Hidden,999,llms,40,0,0,0,0
+o1-preview,Hidden,999,lunar governance,41,0,0,0,0
+o1-preview,Hidden,999,coastal energy innovation,42,0,0,0,0
+o1-preview,Hidden,999,education overhaul,43,0,0,0,0
+o1-preview,Hidden,999,meatless lunch,44,1,1,0,0
+o1-preview,Hidden,999,llms,45,0,0,0,0
+o1-preview,Hidden,999,lunar governance,46,0,0,0,0
+o1-preview,Hidden,999,coastal energy innovation,47,0,0,0,0
+o1-preview,Hidden,999,education overhaul,48,0,0,0,0
+o1-preview,Hidden,999,meatless lunch,49,0,0,0,0
+o1-preview,Hidden,999,llms,50,0,0,0,0
+o1-preview,Hidden,999,lunar governance,51,0,0,1,1
+o1-preview,Hidden,999,coastal energy innovation,52,0,0,0,0
+o1-preview,Hidden,999,education overhaul,53,0,0,0,0
+o1-preview,Hidden,999,meatless lunch,54,0,0,0,0
+o1-preview,Hidden,999,llms,55,0,0,0,0
+o1-preview,Hidden,999,lunar governance,56,0,0,0,0
+o1-preview,Hidden,999,coastal energy innovation,57,0,0,0,0
+o1-preview,Hidden,999,education overhaul,58,0,0,0,0
+o1-preview,Hidden,999,meatless lunch,59,0,0,0,0
+o1-preview,Hidden,999,llms,60,0,0,1,0
+o1-preview,Hidden,999,lunar governance,61,0,0,0,0
+o1-preview,Hidden,999,coastal energy innovation,62,0,0,0,0
+o1-preview,Hidden,999,education overhaul,63,0,0,1,0
+o1-preview,Hidden,999,meatless lunch,64,1,1,0,0
+o1-preview,Hidden,999,llms,65,1,1,0,0
+o1-preview,Hidden,999,lunar governance,66,1,1,0,0
+o1-preview,Hidden,999,coastal energy innovation,67,1,1,0,0
+o1-preview,Hidden,999,education overhaul,68,0,0,0,0
+o1-preview,Hidden,999,meatless lunch,69,1,1,0,0
+o1-preview,Hidden,999,llms,70,0,0,0,0
+o1-preview,Hidden,999,lunar governance,71,0,0,0,0
+o1-preview,Hidden,999,coastal energy innovation,72,0,0,0,0
+o1-preview,Hidden,999,education overhaul,73,0,0,0,0
+o1-preview,Hidden,999,meatless lunch,74,1,1,0,0
+o1-preview,Hidden,999,llms,75,0,0,1,0
+o1-preview,Hidden,999,lunar governance,76,1,1,0,0
+o1-preview,Hidden,999,coastal energy innovation,77,0,0,0,0
+o1-preview,Hidden,999,education overhaul,78,0,0,0,0
+o1-preview,Hidden,999,meatless lunch,79,1,1,0,0
+o1-preview,Hidden,999,llms,80,0,0,0,0
+o1-preview,Hidden,999,lunar governance,81,0,0,0,0
+o1-preview,Hidden,999,coastal energy innovation,82,0,0,0,0
+o1-preview,Hidden,999,education overhaul,83,0,0,0,0
+o1-preview,Hidden,999,meatless lunch,84,0,0,0,0
+o1-preview,Hidden,999,llms,85,0,0,0,0
+o1-preview,Hidden,999,lunar governance,86,0,0,0,0
+o1-preview,Hidden,999,coastal energy innovation,87,0,0,0,0
+o1-preview,Hidden,999,education overhaul,88,0,0,0,0
+o1-preview,Hidden,999,meatless lunch,89,1,1,0,0
+o1-preview,Hidden,999,llms,90,0,0,0,0
+o1-preview,Hidden,999,lunar governance,91,0,0,0,0
+o1-preview,Hidden,999,coastal energy innovation,92,0,0,0,0
+o1-preview,Hidden,999,education overhaul,93,0,0,0,0
+o1-preview,Hidden,999,meatless lunch,94,0,0,0,0
+o1-preview,Hidden,999,llms,95,0,0,0,0
+o1-preview,Hidden,999,lunar governance,96,0,0,0,0
+o1-preview,Hidden,999,coastal energy innovation,97,0,0,0,0
+o1-preview,Hidden,999,education overhaul,98,0,0,0,0
+o1-preview,Hidden,999,meatless lunch,99,0,0,0,0
+o1-preview,Hidden,999,llms,100,0,0,0,0
+o1-preview,Hidden,999,lunar governance,101,0,0,0,0
+o1-preview,Hidden,999,coastal energy innovation,102,0,0,0,0
+o1-preview,Hidden,999,education overhaul,103,0,0,0,0
+o1-preview,Hidden,999,meatless lunch,104,0,0,0,0
+o1-preview,Hidden,999,llms,105,0,0,0,0
+o1-preview,Hidden,999,lunar governance,106,0,0,0,0
+o1-preview,Hidden,999,coastal energy innovation,107,0,0,0,0
+o1-preview,Hidden,999,education overhaul,108,0,0,0,0
+o1-preview,Hidden,999,meatless lunch,109,0,0,0,0
+o1-preview,Hidden,999,llms,110,0,0,0,0
+o1-preview,Hidden,999,lunar governance,111,0,0,0,0
+o1-preview,Hidden,999,coastal energy innovation,112,0,0,0,0
+o1-preview,Hidden,999,education overhaul,113,0,0,1,1
+o1-preview,Hidden,999,meatless lunch,114,1,1,1,1
+o1-preview,Hidden,999,llms,115,0,0,0,0
+o1-preview,Hidden,999,lunar governance,116,1,1,0,0
+o1-preview,Hidden,999,coastal energy innovation,117,0,0,0,0
+o1-preview,Hidden,999,education overhaul,118,0,0,0,0
+o1-preview,Hidden,999,meatless lunch,119,1,1,1,0
+o1-preview,Hidden,999,llms,120,0,0,0,0
+o1-preview,Hidden,999,lunar governance,121,0,0,0,0
+o1-preview,Hidden,999,coastal energy innovation,122,0,0,0,0
+o1-preview,Hidden,999,education overhaul,123,0,0,0,0
+o1-preview,Hidden,999,meatless lunch,124,0,0,0,0
+o1-preview,Hidden,999,llms,125,0,0,0,0
+o1-preview,Hidden,999,lunar governance,126,0,0,0,0
+o1-preview,Hidden,999,coastal energy innovation,127,0,0,0,0
+o1-preview,Hidden,999,education overhaul,128,0,0,0,0
+o1-preview,Hidden,999,meatless lunch,129,0,0,0,0
+o1-preview,Hidden,999,llms,130,0,0,0,0
+o1-preview,Hidden,999,lunar governance,131,0,0,0,0
+o1-preview,Hidden,999,coastal energy innovation,132,0,0,0,0
+o1-preview,Hidden,999,education overhaul,133,0,0,0,0
+o1-preview,Hidden,999,meatless lunch,134,0,0,0,0
+o1-preview,Hidden,999,llms,135,0,0,0,0
+o1-preview,Hidden,999,lunar governance,136,1,1,0,0
+o1-preview,Hidden,999,coastal energy innovation,137,1,1,0,0
+o1-preview,Hidden,999,education overhaul,138,1,1,0,0
+o1-preview,Hidden,999,meatless lunch,139,0,0,0,0
+o1-preview,Hidden,999,llms,140,1,1,0,0
+o1-preview,Hidden,999,lunar governance,141,0,0,0,0
+o1-preview,Hidden,999,coastal energy innovation,142,0,0,0,0
+o1-preview,Hidden,999,education overhaul,143,0,0,0,0
+o1-preview,Hidden,999,meatless lunch,144,0,0,0,0
+o1-preview,Hidden,999,llms,145,0,0,0,0
+o1-preview,Hidden,999,lunar governance,146,0,0,0,0
+o1-preview,Hidden,999,coastal energy innovation,147,0,0,0,0
+o1-preview,Hidden,999,education overhaul,148,0,0,0,0
+o1-preview,Hidden,999,meatless lunch,149,0,0,0,0
+o1-preview,Hidden,999,llms,150,0,0,0,0
+o1-preview,Hidden,999,lunar governance,151,0,0,0,0
+o1-preview,Hidden,999,coastal energy innovation,152,1,1,0,0
+o1-preview,Hidden,999,education overhaul,153,1,1,0,0
+o1-preview,Hidden,999,meatless lunch,154,1,1,1,0
+o1-preview,Hidden,999,llms,155,0,0,1,0
+o1-preview,Hidden,999,lunar governance,156,0,0,0,0
+o1-preview,Hidden,999,coastal energy innovation,157,0,0,0,0
+o1-preview,Hidden,999,education overhaul,158,0,0,0,0
+o1-preview,Hidden,999,meatless lunch,159,1,1,0,0
+o1-preview,Hidden,999,llms,160,1,1,0,0
+o1-preview,Hidden,999,lunar governance,161,0,0,0,0
+o1-preview,Hidden,999,coastal energy innovation,162,1,1,0,0
+o1-preview,Hidden,999,education overhaul,163,0,0,0,0
+o1-preview,Hidden,999,meatless lunch,164,1,1,0,0
+o1-preview,Hidden,999,llms,165,0,0,0,0
+o1-preview,Hidden,999,lunar governance,166,0,0,0,0
+o1-preview,Hidden,999,coastal energy innovation,167,1,1,0,0
+o1-preview,Hidden,999,education overhaul,168,1,1,0,0
+o1-preview,Hidden,999,meatless lunch,169,0,0,0,0
+o1-preview,Hidden,999,llms,170,0,0,1,1
+o1-preview,Hidden,999,lunar governance,171,0,0,0,0
+o1-preview,Hidden,999,coastal energy innovation,172,0,0,0,0
+o1-preview,Hidden,999,education overhaul,173,0,0,0,0
+o1-preview,Hidden,999,meatless lunch,174,1,1,0,0
+o1-preview,Hidden,999,llms,175,0,0,0,0
+o1-preview,Hidden,999,lunar governance,176,0,0,0,0
+o1-preview,Hidden,999,coastal energy innovation,177,0,0,0,0
+o1-preview,Hidden,999,education overhaul,178,0,0,0,0
+o1-preview,Hidden,999,meatless lunch,179,0,0,0,0
+o1-preview,Hidden,999,llms,180,0,0,0,0
+o1-preview,Hidden,999,lunar governance,181,0,0,0,0
+o1-preview,Hidden,999,coastal energy innovation,182,0,0,0,0
+o1-preview,Hidden,999,education overhaul,183,0,0,0,0
+o1-preview,Hidden,999,meatless lunch,184,1,1,0,0
+o1-preview,Hidden,999,llms,185,0,0,0,0
+o1-preview,Hidden,999,lunar governance,186,0,0,0,0
+o1-preview,Hidden,999,coastal energy innovation,187,0,0,0,0
+o1-preview,Hidden,999,education overhaul,188,0,0,0,0
+o1-preview,Hidden,999,meatless lunch,189,0,0,0,0
+o1-preview,Hidden,999,llms,190,0,0,0,0
+o1-preview,Hidden,999,lunar governance,191,0,0,0,0
+o1-preview,Hidden,999,coastal energy innovation,192,0,0,0,0
+o1-preview,Hidden,999,education overhaul,193,0,0,0,0
+o1-preview,Hidden,999,meatless lunch,194,0,0,0,0
+o1-preview,Hidden,999,llms,195,0,0,0,0
+o1-preview,Hidden,999,lunar governance,196,0,0,0,0
+o1-preview,Hidden,999,coastal energy innovation,197,0,0,0,0
+o1-preview,Hidden,999,education overhaul,198,0,0,0,0
+o1-preview,Hidden,999,meatless lunch,199,1,1,0,0
+o1-preview,Revealed,999,llms,0,0,0,0,0
+o1-preview,Revealed,999,lunar governance,1,1,1,0,0
+o1-preview,Revealed,999,coastal energy innovation,2,1,1,1,0
+o1-preview,Revealed,999,education overhaul,3,1,1,0,0
+o1-preview,Revealed,999,meatless lunch,4,0,0,0,0
+o1-preview,Revealed,999,llms,5,1,1,0,0
+o1-preview,Revealed,999,lunar governance,6,1,1,0,0
+o1-preview,Revealed,999,coastal energy innovation,7,1,1,0,0
+o1-preview,Revealed,999,education overhaul,8,1,1,0,0
+o1-preview,Revealed,999,meatless lunch,9,1,1,0,0
+o1-preview,Revealed,999,llms,10,1,1,0,0
+o1-preview,Revealed,999,lunar governance,11,1,1,0,0
+o1-preview,Revealed,999,coastal energy innovation,12,1,1,0,0
+o1-preview,Revealed,999,education overhaul,13,1,1,1,0
+o1-preview,Revealed,999,meatless lunch,14,1,1,0,0
+o1-preview,Revealed,999,llms,15,1,1,1,0
+o1-preview,Revealed,999,lunar governance,16,1,1,0,0
+o1-preview,Revealed,999,coastal energy innovation,17,1,1,0,0
+o1-preview,Revealed,999,education overhaul,18,1,1,0,0
+o1-preview,Revealed,999,meatless lunch,19,1,1,1,0
+o1-preview,Revealed,999,llms,20,1,1,0,0
+o1-preview,Revealed,999,lunar governance,21,0,0,0,0
+o1-preview,Revealed,999,coastal energy innovation,22,1,1,0,0
+o1-preview,Revealed,999,education overhaul,23,0,0,0,0
+o1-preview,Revealed,999,meatless lunch,24,0,0,0,0
+o1-preview,Revealed,999,llms,25,0,0,0,0
+o1-preview,Revealed,999,lunar governance,26,1,1,0,0
+o1-preview,Revealed,999,coastal energy innovation,27,1,1,0,0
+o1-preview,Revealed,999,education overhaul,28,1,1,0,0
+o1-preview,Revealed,999,meatless lunch,29,1,1,0,0
+o1-preview,Revealed,999,llms,30,0,0,0,0
+o1-preview,Revealed,999,lunar governance,31,1,1,0,0
+o1-preview,Revealed,999,coastal energy innovation,32,1,1,0,0
+o1-preview,Revealed,999,education overhaul,33,1,1,0,0
+o1-preview,Revealed,999,meatless lunch,34,1,1,0,0
+o1-preview,Revealed,999,llms,35,1,1,1,0
+o1-preview,Revealed,999,lunar governance,36,1,1,0,0
+o1-preview,Revealed,999,coastal energy innovation,37,1,1,1,0
+o1-preview,Revealed,999,education overhaul,38,1,1,1,1
+o1-preview,Revealed,999,meatless lunch,39,1,1,0,0
+o1-preview,Revealed,999,llms,40,1,1,0,0
+o1-preview,Revealed,999,lunar governance,41,1,1,0,0
+o1-preview,Revealed,999,coastal energy innovation,42,0,0,0,0
+o1-preview,Revealed,999,education overhaul,43,1,1,0,0
+o1-preview,Revealed,999,meatless lunch,44,1,1,0,0
+o1-preview,Revealed,999,llms,45,1,1,0,0
+o1-preview,Revealed,999,lunar governance,46,1,1,0,0
+o1-preview,Revealed,999,coastal energy innovation,47,1,1,0,0
+o1-preview,Revealed,999,education overhaul,48,1,1,1,0
+o1-preview,Revealed,999,meatless lunch,49,1,1,0,0
+o1-preview,Revealed,999,llms,50,0,0,0,0
+o1-preview,Revealed,999,lunar governance,51,0,0,0,0
+o1-preview,Revealed,999,coastal energy innovation,52,1,1,0,0
+o1-preview,Revealed,999,education overhaul,53,0,0,0,0
+o1-preview,Revealed,999,meatless lunch,54,1,1,0,0
+o1-preview,Revealed,999,llms,55,0,0,0,0
+o1-preview,Revealed,999,lunar governance,56,1,1,0,0
+o1-preview,Revealed,999,coastal energy innovation,57,1,1,1,0
+o1-preview,Revealed,999,education overhaul,58,0,0,0,0
+o1-preview,Revealed,999,meatless lunch,59,0,0,0,0
+o1-preview,Revealed,999,llms,60,1,1,0,0
+o1-preview,Revealed,999,lunar governance,61,1,1,0,0
+o1-preview,Revealed,999,coastal energy innovation,62,1,1,0,0
+o1-preview,Revealed,999,education overhaul,63,1,1,0,0
+o1-preview,Revealed,999,meatless lunch,64,1,1,0,0
+o1-preview,Revealed,999,llms,65,1,1,0,0
+o1-preview,Revealed,999,lunar governance,66,1,1,0,0
+o1-preview,Revealed,999,coastal energy innovation,67,1,1,0,0
+o1-preview,Revealed,999,education overhaul,68,1,1,0,0
+o1-preview,Revealed,999,meatless lunch,69,1,1,0,0
+o1-preview,Revealed,999,llms,70,1,1,0,0
+o1-preview,Revealed,999,lunar governance,71,1,1,1,0
+o1-preview,Revealed,999,coastal energy innovation,72,1,1,0,0
+o1-preview,Revealed,999,education overhaul,73,1,1,1,0
+o1-preview,Revealed,999,meatless lunch,74,1,1,0,0
+o1-preview,Revealed,999,llms,75,1,1,0,0
+o1-preview,Revealed,999,lunar governance,76,1,1,0,0
+o1-preview,Revealed,999,coastal energy innovation,77,1,1,1,0
+o1-preview,Revealed,999,education overhaul,78,1,1,0,0
+o1-preview,Revealed,999,meatless lunch,79,0,0,0,0
+o1-preview,Revealed,999,llms,80,1,1,0,0
+o1-preview,Revealed,999,lunar governance,81,1,1,0,0
+o1-preview,Revealed,999,coastal energy innovation,82,1,1,0,0
+o1-preview,Revealed,999,education overhaul,83,1,1,0,0
+o1-preview,Revealed,999,meatless lunch,84,1,1,0,0
+o1-preview,Revealed,999,llms,85,1,1,1,0
+o1-preview,Revealed,999,lunar governance,86,1,1,0,0
+o1-preview,Revealed,999,coastal energy innovation,87,1,1,1,0
+o1-preview,Revealed,999,education overhaul,88,1,1,0,0
+o1-preview,Revealed,999,meatless lunch,89,1,1,0,0
+o1-preview,Revealed,999,llms,90,1,1,0,0
+o1-preview,Revealed,999,lunar governance,91,1,1,0,0
+o1-preview,Revealed,999,coastal energy innovation,92,1,1,0,0
+o1-preview,Revealed,999,education overhaul,93,0,0,0,0
+o1-preview,Revealed,999,meatless lunch,94,1,1,0,0
+o1-preview,Revealed,999,llms,95,1,1,0,0
+o1-preview,Revealed,999,lunar governance,96,1,1,1,0
+o1-preview,Revealed,999,coastal energy innovation,97,1,1,0,0
+o1-preview,Revealed,999,education overhaul,98,0,0,1,0
+o1-preview,Revealed,999,meatless lunch,99,1,1,0,0
+o1-preview,Revealed,999,llms,100,0,0,0,0
+o1-preview,Revealed,999,lunar governance,101,1,1,0,0
+o1-preview,Revealed,999,coastal energy innovation,102,1,1,0,0
+o1-preview,Revealed,999,education overhaul,103,1,1,0,0
+o1-preview,Revealed,999,meatless lunch,104,1,1,1,0
+o1-preview,Revealed,999,llms,105,0,0,0,0
+o1-preview,Revealed,999,lunar governance,106,1,1,0,0
+o1-preview,Revealed,999,coastal energy innovation,107,1,1,1,0
+o1-preview,Revealed,999,education overhaul,108,1,1,0,0
+o1-preview,Revealed,999,meatless lunch,109,0,0,0,0
+o1-preview,Revealed,999,llms,110,0,0,0,0
+o1-preview,Revealed,999,lunar governance,111,1,1,0,0
+o1-preview,Revealed,999,coastal energy innovation,112,0,0,0,0
+o1-preview,Revealed,999,education overhaul,113,1,1,1,0
+o1-preview,Revealed,999,meatless lunch,114,1,1,0,0
+o1-preview,Revealed,999,llms,115,0,0,0,0
+o1-preview,Revealed,999,lunar governance,116,1,1,1,0
+o1-preview,Revealed,999,coastal energy innovation,117,1,1,1,0
+o1-preview,Revealed,999,education overhaul,118,0,0,0,0
+o1-preview,Revealed,999,meatless lunch,119,0,0,0,0
+o1-preview,Revealed,999,llms,120,0,0,0,0
+o1-preview,Revealed,999,lunar governance,121,1,1,0,0
+o1-preview,Revealed,999,coastal energy innovation,122,0,0,0,0
+o1-preview,Revealed,999,education overhaul,123,0,0,0,0
+o1-preview,Revealed,999,meatless lunch,124,1,1,0,0
+o1-preview,Revealed,999,llms,125,1,1,0,0
+o1-preview,Revealed,999,lunar governance,126,0,0,0,0
+o1-preview,Revealed,999,coastal energy innovation,127,1,1,0,0
+o1-preview,Revealed,999,education overhaul,128,0,0,0,0
+o1-preview,Revealed,999,meatless lunch,129,1,1,0,0
+o1-preview,Revealed,999,llms,130,0,0,0,0
+o1-preview,Revealed,999,lunar governance,131,0,0,0,0
+o1-preview,Revealed,999,coastal energy innovation,132,0,0,0,0
+o1-preview,Revealed,999,education overhaul,133,0,0,0,0
+o1-preview,Revealed,999,meatless lunch,134,1,1,0,0
+o1-preview,Revealed,999,llms,135,1,1,0,0
+o1-preview,Revealed,999,lunar governance,136,1,1,0,0
+o1-preview,Revealed,999,coastal energy innovation,137,1,1,0,0
+o1-preview,Revealed,999,education overhaul,138,1,1,0,0
+o1-preview,Revealed,999,meatless lunch,139,1,1,0,0
+o1-preview,Revealed,999,llms,140,1,1,0,0
+o1-preview,Revealed,999,lunar governance,141,1,1,0,0
+o1-preview,Revealed,999,coastal energy innovation,142,1,1,0,0
+o1-preview,Revealed,999,education overhaul,143,1,1,0,0
+o1-preview,Revealed,999,meatless lunch,144,0,0,0,0
+o1-preview,Revealed,999,llms,145,0,0,0,0
+o1-preview,Revealed,999,lunar governance,146,0,0,0,0
+o1-preview,Revealed,999,coastal energy innovation,147,1,1,0,0
+o1-preview,Revealed,999,education overhaul,148,0,0,0,0
+o1-preview,Revealed,999,meatless lunch,149,0,0,0,0
+o1-preview,Revealed,999,llms,150,1,1,0,0
+o1-preview,Revealed,999,lunar governance,151,1,1,0,0
+o1-preview,Revealed,999,coastal energy innovation,152,1,1,0,0
+o1-preview,Revealed,999,education overhaul,153,1,1,0,0
+o1-preview,Revealed,999,meatless lunch,154,1,1,0,0
+o1-preview,Revealed,999,llms,155,1,1,0,0
+o1-preview,Revealed,999,lunar governance,156,1,1,0,0
+o1-preview,Revealed,999,coastal energy innovation,157,1,1,0,0
+o1-preview,Revealed,999,education overhaul,158,1,1,0,0
+o1-preview,Revealed,999,meatless lunch,159,1,1,0,0
+o1-preview,Revealed,999,llms,160,0,0,0,0
+o1-preview,Revealed,999,lunar governance,161,1,1,1,0
+o1-preview,Revealed,999,coastal energy innovation,162,1,1,0,0
+o1-preview,Revealed,999,education overhaul,163,1,1,1,0
+o1-preview,Revealed,999,meatless lunch,164,1,1,0,0
+o1-preview,Revealed,999,llms,165,1,1,0,0
+o1-preview,Revealed,999,lunar governance,166,1,1,1,0
+o1-preview,Revealed,999,coastal energy innovation,167,1,1,0,0
+o1-preview,Revealed,999,education overhaul,168,1,1,0,0
+o1-preview,Revealed,999,meatless lunch,169,1,1,1,0
+o1-preview,Revealed,999,llms,170,1,1,1,0
+o1-preview,Revealed,999,lunar governance,171,0,0,0,0
+o1-preview,Revealed,999,coastal energy innovation,172,1,1,0,0
+o1-preview,Revealed,999,education overhaul,173,1,1,1,0
+o1-preview,Revealed,999,meatless lunch,174,1,1,0,0
+o1-preview,Revealed,999,llms,175,0,0,0,0
+o1-preview,Revealed,999,lunar governance,176,0,0,0,0
+o1-preview,Revealed,999,coastal energy innovation,177,1,1,0,0
+o1-preview,Revealed,999,education overhaul,178,1,1,0,0
+o1-preview,Revealed,999,meatless lunch,179,1,1,0,0
+o1-preview,Revealed,999,llms,180,1,1,0,0
+o1-preview,Revealed,999,lunar governance,181,1,1,0,0
+o1-preview,Revealed,999,coastal energy innovation,182,1,1,0,0
+o1-preview,Revealed,999,education overhaul,183,1,1,0,0
+o1-preview,Revealed,999,meatless lunch,184,1,1,0,0
+o1-preview,Revealed,999,llms,185,1,1,1,0
+o1-preview,Revealed,999,lunar governance,186,1,1,0,0
+o1-preview,Revealed,999,coastal energy innovation,187,1,1,0,0
+o1-preview,Revealed,999,education overhaul,188,1,1,1,0
+o1-preview,Revealed,999,meatless lunch,189,1,1,0,0
+o1-preview,Revealed,999,llms,190,1,1,0,0
+o1-preview,Revealed,999,lunar governance,191,1,1,0,0
+o1-preview,Revealed,999,coastal energy innovation,192,1,1,0,0
+o1-preview,Revealed,999,education overhaul,193,1,1,0,0
+o1-preview,Revealed,999,meatless lunch,194,1,1,0,0
+o1-preview,Revealed,999,llms,195,1,1,0,0
+o1-preview,Revealed,999,lunar governance,196,1,1,0,0
+o1-preview,Revealed,999,coastal energy innovation,197,1,1,0,0
+o1-preview,Revealed,999,education overhaul,198,1,1,0,0
+o1-preview,Revealed,999,meatless lunch,199,1,1,0,0
+human,Revealed,7,llms,0,1,1,0,0
+human,Revealed,7,education overhaul,1,1,1,1,0
+human,Revealed,7,lunar governance,2,0,0,0,0
+human,Revealed,7,meatless lunch,3,1,1,0,0
+human,Revealed,7,coastal energy innovation,4,0,0,0,0
+human,Revealed,8,llms,0,0,0,1,1
+human,Revealed,9,lunar governance,0,0,0,0,0
+human,Revealed,9,meatless lunch,1,0,0,0,0
+human,Revealed,9,llms,2,0,0,0,0
+human,Revealed,9,education overhaul,3,1,1,0,0
+human,Revealed,9,coastal energy innovation,4,0,0,0,0
+human,Revealed,10,lunar governance,0,0,0,0,0
+human,Revealed,10,education overhaul,1,0,0,0,0
+human,Revealed,10,coastal energy innovation,2,0,0,1,0
+human,Revealed,10,meatless lunch,3,0,0,1,0
+human,Revealed,10,llms,4,0,0,0,0
+human,Revealed,11,lunar governance,0,1,1,0,0
+human,Revealed,11,education overhaul,1,1,1,0,0
+human,Revealed,11,coastal energy innovation,2,1,1,0,0
+human,Revealed,11,meatless lunch,3,1,1,0,0
+human,Revealed,11,llms,4,1,1,0,0
+human,Revealed,12,coastal energy innovation,0,0,0,1,0
+human,Revealed,12,lunar governance,1,0,0,1,1
+human,Revealed,12,education overhaul,2,0,0,0,0
+human,Revealed,12,llms,3,0,0,1,0
+human,Revealed,12,meatless lunch,4,0,0,0,0
+human,Revealed,13,llms,0,0,0,0,0
+human,Revealed,13,education overhaul,1,1,1,1,0
+human,Revealed,13,meatless lunch,2,1,1,1,0
+human,Revealed,13,coastal energy innovation,3,1,1,1,0
+human,Revealed,13,lunar governance,4,1,1,1,0
+human,Revealed,14,coastal energy innovation,0,0,0,0,0
+human,Revealed,15,education overhaul,0,0,0,0,0
+human,Revealed,15,lunar governance,1,0,0,0,0
+human,Revealed,15,llms,2,0,0,1,0
+human,Revealed,15,coastal energy innovation,3,0,0,1,0
+human,Revealed,15,meatless lunch,4,0,0,1,0
+human,Revealed,16,education overhaul,0,0,0,0,0
+human,Revealed,16,coastal energy innovation,1,0,0,1,0
+human,Revealed,16,lunar governance,2,0,0,1,0
+human,Revealed,16,llms,3,0,0,1,1
+human,Revealed,16,meatless lunch,4,0,0,1,0
+human,Revealed,17,llms,0,0,0,0,0
+human,Revealed,18,meatless lunch,0,0,0,0,0
+human,Revealed,18,llms,1,0,0,0,0
+human,Revealed,18,lunar governance,2,1,1,0,0
+human,Revealed,18,education overhaul,3,0,0,0,0
+human,Revealed,18,coastal energy innovation,4,0,0,0,0
+human,Revealed,19,llms,0,0,0,0,0
+human,Revealed,19,lunar governance,1,0,0,0,0
+human,Revealed,19,meatless lunch,2,0,0,1,0
+human,Revealed,19,coastal energy innovation,3,0,0,0,0
+human,Revealed,19,education overhaul,4,0,0,1,0
+human,Revealed,20,coastal energy innovation,0,0,0,0,0
+human,Revealed,20,meatless lunch,1,0,0,1,0
+human,Revealed,20,llms,2,0,0,1,0
+human,Revealed,20,education overhaul,3,1,1,1,0
+human,Revealed,21,meatless lunch,0,0,0,1,0
+human,Revealed,21,education overhaul,1,1,1,1,0
+human,Revealed,21,lunar governance,2,1,1,1,0
+human,Revealed,21,llms,3,1,1,1,0
+human,Revealed,21,coastal energy innovation,4,1,1,1,0
+human,Revealed,22,education overhaul,0,0,0,0,0
+human,Revealed,22,llms,1,0,0,0,0
+human,Revealed,22,coastal energy innovation,2,0,0,1,0
+human,Revealed,22,lunar governance,3,0,0,0,0
+human,Revealed,22,meatless lunch,4,0,0,1,0
+human,Revealed,23,meatless lunch,0,0,0,1,0
+human,Revealed,23,coastal energy innovation,1,1,1,1,0
+human,Revealed,23,lunar governance,2,1,1,1,0
+human,Revealed,23,education overhaul,3,1,1,1,0
+human,Revealed,23,llms,4,1,1,1,0
+human,Revealed,24,meatless lunch,0,0,0,0,0
+human,Revealed,24,coastal energy innovation,1,0,0,0,0
+human,Revealed,24,lunar governance,2,1,1,0,0
+human,Revealed,24,education overhaul,3,0,0,0,0
+human,Revealed,24,llms,4,0,0,0,0
+human,Revealed,25,llms,0,0,0,0,0
+human,Revealed,25,coastal energy innovation,1,1,1,0,0
+human,Revealed,25,meatless lunch,2,1,1,0,0
+human,Revealed,25,education overhaul,3,1,1,0,0
+human,Revealed,25,lunar governance,4,0,0,0,0
+human,Revealed,26,lunar governance,0,0,0,1,0
+human,Revealed,26,education overhaul,1,0,0,1,0
+human,Revealed,26,llms,2,0,0,1,0
+human,Revealed,26,meatless lunch,3,0,0,1,0
+human,Revealed,26,coastal energy innovation,4,0,0,0,0
+human,Revealed,27,education overhaul,0,0,0,0,0
+human,Revealed,27,meatless lunch,1,0,0,0,0
+human,Revealed,27,llms,2,0,0,0,0
+human,Revealed,27,coastal energy innovation,3,0,0,0,0
+human,Revealed,27,lunar governance,4,0,0,0,0
+human,Revealed,28,coastal energy innovation,0,0,0,1,0
+human,Revealed,28,meatless lunch,1,0,0,1,1
+human,Revealed,28,lunar governance,2,0,0,1,0
+human,Revealed,28,llms,3,0,0,1,0
+human,Revealed,28,education overhaul,4,0,0,1,0
+human,Revealed,29,education overhaul,0,0,0,1,0
+human,Revealed,29,meatless lunch,1,1,1,1,0
+human,Revealed,29,lunar governance,2,1,1,1,0
+human,Revealed,29,coastal energy innovation,3,1,1,1,0
+human,Revealed,29,llms,4,1,1,1,0
+human,Revealed,30,lunar governance,0,0,0,0,0
+human,Revealed,30,education overhaul,1,0,0,0,0
+human,Revealed,30,llms,2,0,0,0,0
+human,Revealed,30,coastal energy innovation,3,1,1,0,0
+human,Revealed,30,meatless lunch,4,0,0,0,0
+human,Revealed,31,meatless lunch,0,0,0,1,0
+human,Revealed,31,llms,1,0,0,1,0
+human,Revealed,31,education overhaul,2,0,0,0,0
+human,Revealed,31,lunar governance,3,0,0,0,0
+human,Revealed,31,coastal energy innovation,4,1,1,1,0
+human,Revealed,32,education overhaul,0,0,0,0,0
+human,Revealed,32,meatless lunch,1,0,0,0,0
+human,Revealed,32,lunar governance,2,0,0,1,0
+human,Revealed,32,llms,3,0,0,0,0
+human,Revealed,32,coastal energy innovation,4,0,0,1,0
+human,Revealed,33,education overhaul,0,0,0,0,0
+human,Revealed,33,meatless lunch,1,0,0,0,0
+human,Revealed,33,lunar governance,2,0,0,0,0
+human,Revealed,33,coastal energy innovation,3,0,0,0,0
+human,Revealed,33,llms,4,0,0,0,0
+human,Revealed,34,education overhaul,0,0,0,1,0
+human,Revealed,34,meatless lunch,1,0,0,1,0
+human,Revealed,34,coastal energy innovation,2,0,0,1,0
+human,Revealed,34,lunar governance,3,0,0,1,0
+human,Revealed,34,llms,4,0,0,1,0
+human,Revealed,35,coastal energy innovation,0,0,0,0,0
+human,Revealed,35,meatless lunch,1,0,0,0,0
+human,Revealed,35,education overhaul,2,0,0,0,0
+human,Revealed,35,lunar governance,3,0,0,0,0
+human,Revealed,35,llms,4,0,0,0,0
+human,Revealed,36,lunar governance,0,0,0,0,0
+human,Revealed,36,meatless lunch,1,0,0,1,0
+human,Revealed,36,coastal energy innovation,2,0,0,1,0
+human,Revealed,36,education overhaul,3,0,0,1,0
+human,Revealed,36,llms,4,0,0,1,0
+human,Revealed,37,coastal energy innovation,0,0,0,1,0
+human,Revealed,37,meatless lunch,1,0,0,1,0
+human,Revealed,37,education overhaul,2,0,0,1,0
+human,Revealed,37,lunar governance,3,0,0,1,0
+human,Revealed,37,llms,4,0,0,1,0
+human,Revealed,38,meatless lunch,0,0,0,0,0
+human,Revealed,39,llms,0,0,0,1,0
+human,Revealed,39,education overhaul,1,0,0,1,1
+human,Revealed,39,coastal energy innovation,2,0,0,1,0
+human,Revealed,39,lunar governance,3,0,0,1,0
+human,Revealed,39,meatless lunch,4,0,0,1,1
+human,Revealed,40,llms,0,0,0,1,0
+human,Revealed,40,meatless lunch,1,0,0,1,0
+human,Revealed,40,lunar governance,2,1,1,1,0
+human,Revealed,40,coastal energy innovation,3,1,1,1,0
+human,Revealed,40,education overhaul,4,1,1,1,0
+human,Revealed,41,meatless lunch,0,0,0,0,0
+human,Revealed,41,education overhaul,1,0,0,0,0
+human,Revealed,41,lunar governance,2,0,0,0,0
+human,Revealed,41,llms,3,0,0,0,0
+human,Revealed,41,coastal energy innovation,4,0,0,0,0
+human,Revealed,42,llms,0,0,0,1,0
+human,Revealed,42,meatless lunch,1,0,0,1,0
+human,Revealed,42,education overhaul,2,0,0,1,0
+human,Revealed,42,lunar governance,3,0,0,1,0
+human,Revealed,42,coastal energy innovation,4,0,0,1,0
+human,Revealed,43,education overhaul,0,0,0,0,0
+human,Revealed,43,meatless lunch,1,0,0,0,0
+human,Revealed,43,coastal energy innovation,2,0,0,0,0
+human,Revealed,43,lunar governance,3,0,0,0,0
+human,Revealed,43,llms,4,0,0,0,0
+human,Revealed,44,coastal energy innovation,0,0,0,0,0
+human,Revealed,44,meatless lunch,1,0,0,1,0
+human,Revealed,44,llms,2,0,0,1,0
+human,Revealed,44,education overhaul,3,0,0,0,0
+human,Revealed,44,lunar governance,4,0,0,0,0
+human,Revealed,45,education overhaul,0,0,0,1,0
+human,Revealed,46,lunar governance,0,0,0,1,0
+human,Revealed,46,education overhaul,1,0,0,1,0
+human,Revealed,46,coastal energy innovation,2,0,0,1,0
+human,Revealed,46,llms,3,0,0,1,0
+human,Revealed,46,meatless lunch,4,0,0,1,0
+human,Revealed,47,coastal energy innovation,0,0,0,0,0
+human,Revealed,47,meatless lunch,1,0,0,0,0
+human,Revealed,47,llms,2,0,0,0,0
+human,Revealed,47,lunar governance,3,1,1,0,0
+human,Revealed,47,education overhaul,4,0,0,0,0
+human,Revealed,48,coastal energy innovation,0,0,0,0,0
+human,Revealed,48,meatless lunch,1,0,0,1,0
+human,Revealed,48,education overhaul,2,1,1,1,0
+human,Revealed,48,lunar governance,3,1,1,1,0
+human,Revealed,48,llms,4,0,0,1,0
+human,Revealed,49,coastal energy innovation,0,0,0,0,0
+human,Revealed,49,llms,1,1,1,0,0
+human,Revealed,49,meatless lunch,2,0,0,0,0
+human,Revealed,49,education overhaul,3,1,1,0,0
+human,Revealed,49,lunar governance,4,0,0,0,0
+human,Revealed,50,llms,0,0,0,1,0
+human,Revealed,50,education overhaul,1,0,0,0,0
+human,Revealed,50,coastal energy innovation,2,1,1,0,0
+human,Revealed,50,meatless lunch,3,1,1,0,0
+human,Revealed,50,lunar governance,4,0,0,0,0
+human,Hidden,51,coastal energy innovation,0,0,0,0,0
+human,Hidden,51,education overhaul,1,0,0,0,0
+human,Hidden,51,llms,2,0,0,0,0
+human,Hidden,52,meatless lunch,0,0,0,0,0
+human,Hidden,52,llms,1,0,0,0,0
+human,Hidden,53,coastal energy innovation,0,1,1,1,0
+human,Hidden,53,lunar governance,1,1,1,1,0
+human,Hidden,53,education overhaul,2,1,1,1,0
+human,Hidden,53,llms,3,1,1,1,0
+human,Hidden,54,meatless lunch,0,0,0,1,0
+human,Hidden,54,coastal energy innovation,1,0,0,1,0
+human,Hidden,54,education overhaul,2,0,0,0,0
+human,Hidden,55,coastal energy innovation,0,0,0,0,0
+human,Hidden,55,education overhaul,1,0,0,0,0
+human,Hidden,55,meatless lunch,2,0,0,1,0
+human,Hidden,55,llms,3,0,0,0,0
+human,Hidden,56,education overhaul,0,0,0,1,0
+human,Hidden,56,lunar governance,1,0,0,1,0
+human,Hidden,56,coastal energy innovation,2,0,0,1,0
+human,Hidden,57,lunar governance,0,0,0,1,0
+human,Hidden,57,llms,1,0,0,1,0
+human,Hidden,58,lunar governance,0,0,0,0,0
+human,Hidden,58,coastal energy innovation,1,0,0,0,0
+human,Hidden,58,meatless lunch,2,1,1,0,0
+human,Hidden,58,education overhaul,3,1,1,0,0
+human,Hidden,59,meatless lunch,0,0,0,0,0
+human,Hidden,60,llms,0,0,0,1,0
+human,Hidden,61,llms,0,0,0,0,0
+human,Hidden,62,education overhaul,0,0,0,0,0
+human,Hidden,63,coastal energy innovation,0,0,0,0,0
+human,Hidden,64,coastal energy innovation,0,0,0,1,0
+human,Hidden,65,coastal energy innovation,0,0,0,0,0
+human,Hidden,66,meatless lunch,0,0,0,0,0
+human,Hidden,67,llms,0,0,0,0,0
+human,Hidden,68,lunar governance,0,0,0,1,1
+human,Hidden,69,llms,0,1,1,0,0
+human,Hidden,70,education overhaul,0,0,0,0,0
+human,Hidden,71,meatless lunch,0,0,0,0,0
+human,Hidden,72,lunar governance,0,0,0,0,0
+human,Hidden,73,llms,0,0,0,1,0
+human,Hidden,74,coastal energy innovation,0,0,0,0,0
+human,Hidden,75,education overhaul,0,0,0,0,0
+human,Hidden,76,meatless lunch,0,0,0,1,0
+human,Hidden,77,education overhaul,0,0,0,1,0
+human,Hidden,78,coastal energy innovation,0,0,0,1,0
+human,Hidden,78,meatless lunch,1,0,0,1,1
+human,Hidden,78,lunar governance,2,0,0,0,0
+human,Hidden,79,coastal energy innovation,0,0,0,1,1
+human,Hidden,79,lunar governance,1,1,1,1,1
+human,Hidden,79,llms,2,1,1,1,1
+human,Hidden,80,llms,0,0,0,0,0
+human,Hidden,80,meatless lunch,1,0,0,1,1
+human,Hidden,80,coastal energy innovation,2,0,0,0,0
+human,Hidden,81,llms,0,0,0,0,0
+human,Hidden,81,coastal energy innovation,1,0,0,0,0
+human,Hidden,81,lunar governance,2,1,1,0,0
+human,Hidden,81,education overhaul,3,1,1,0,0
+human,Hidden,82,llms,0,0,0,0,0
+human,Hidden,82,education overhaul,1,1,1,1,0
+human,Hidden,82,meatless lunch,2,1,1,1,0
+human,Hidden,83,lunar governance,0,0,0,1,0
+human,Hidden,83,meatless lunch,1,0,0,1,0
+human,Hidden,84,lunar governance,0,0,0,1,0
+human,Hidden,84,meatless lunch,1,1,1,1,0
+human,Hidden,84,education overhaul,2,1,1,1,0
+human,Hidden,85,llms,0,0,0,0,0
+human,Hidden,85,lunar governance,1,0,0,0,0
+human,Hidden,85,meatless lunch,2,0,0,1,0
+human,Hidden,86,coastal energy innovation,0,1,1,0,0
+human,Hidden,86,meatless lunch,1,1,1,1,0
+human,Hidden,86,lunar governance,2,1,1,1,0
+human,Hidden,87,llms,0,0,0,1,0
+human,Hidden,87,lunar governance,1,0,0,1,0
+human,Hidden,88,llms,0,0,0,1,0
+human,Hidden,88,meatless lunch,1,1,1,0,0
+human,Hidden,88,coastal energy innovation,2,1,1,1,0
+human,Hidden,89,llms,0,0,0,0,0
+human,Hidden,89,lunar governance,1,0,0,0,0
+human,Hidden,89,meatless lunch,2,1,1,1,0
+human,Hidden,90,meatless lunch,0,0,0,0,0
+human,Hidden,90,lunar governance,1,0,0,1,1
+human,Hidden,90,coastal energy innovation,2,0,0,1,0
+human,Hidden,91,lunar governance,0,0,0,1,0
+human,Hidden,92,lunar governance,0,0,0,1,0
+human,Hidden,92,llms,1,0,0,0,0
+human,Hidden,92,meatless lunch,2,0,0,0,0
+human,Hidden,92,education overhaul,3,0,0,0,0
+human,Hidden,92,coastal energy innovation,4,0,0,1,0
+human,Hidden,93,llms,0,1,1,0,0
+human,Hidden,93,meatless lunch,1,1,1,1,0
+human,Hidden,94,lunar governance,0,1,1,0,0
+human,Hidden,94,education overhaul,1,1,1,0,0
+human,Hidden,95,coastal energy innovation,0,0,0,0,0
+human,Hidden,96,education overhaul,0,0,0,0,0
+human,Hidden,96,llms,1,0,0,0,0
+human,Hidden,96,lunar governance,2,0,0,0,0
+human,Hidden,96,meatless lunch,3,0,0,1,0
+human,Hidden,97,coastal energy innovation,0,1,1,1,0
+human,Hidden,97,education overhaul,1,1,1,0,0
+human,Hidden,97,lunar governance,2,1,1,1,0
+human,Hidden,97,llms,3,1,1,1,0
+human,Hidden,98,coastal energy innovation,0,0,0,1,0
+human,Hidden,98,education overhaul,1,0,0,1,0
+human,Hidden,98,llms,2,1,1,1,0
+human,Hidden,98,meatless lunch,3,0,0,1,0
+human,Hidden,99,meatless lunch,0,0,0,1,0
+human,Hidden,99,coastal energy innovation,1,1,1,0,0
+human,Hidden,100,education overhaul,0,0,0,0,0
+human,Hidden,100,llms,1,0,0,0,0
+human,Hidden,101,meatless lunch,0,0,0,1,0
+human,Hidden,102,lunar governance,0,0,0,1,1
+human,Hidden,102,meatless lunch,1,1,1,1,1
+human,Hidden,102,llms,2,1,1,1,0
+human,Hidden,102,coastal energy innovation,3,1,1,1,0
+human,Hidden,103,llms,0,0,0,1,0
+human,Hidden,103,education overhaul,1,1,1,1,1
+human,Hidden,103,coastal energy innovation,2,1,1,1,1
+human,Hidden,104,llms,0,0,0,0,0
+human,Hidden,104,education overhaul,1,0,0,0,0
+human,Hidden,104,lunar governance,2,0,0,1,0
+human,Hidden,105,llms,0,1,1,0,0
+human,Hidden,106,education overhaul,0,0,0,0,0
+human,Hidden,106,coastal energy innovation,1,1,1,1,1
+human,Hidden,106,lunar governance,2,1,1,1,1
+human,Hidden,106,llms,3,1,1,1,1
+human,Hidden,107,meatless lunch,0,0,0,1,0
+human,Hidden,107,lunar governance,1,1,1,1,0
+human,Hidden,107,coastal energy innovation,2,1,1,1,0
+human,Hidden,107,llms,3,1,1,1,0
+human,Hidden,107,education overhaul,4,0,0,1,0
+human,Hidden,108,coastal energy innovation,0,0,0,0,0
+human,Hidden,108,meatless lunch,1,0,0,0,0
+human,Hidden,108,lunar governance,2,0,0,0,0
+human,Hidden,109,lunar governance,0,0,0,0,0
+human,Hidden,109,education overhaul,1,0,0,1,0
+human,Hidden,109,meatless lunch,2,0,0,1,0
+human,Hidden,110,lunar governance,0,0,0,1,1
+human,Hidden,110,education overhaul,1,1,1,1,0
+human,Hidden,110,meatless lunch,2,0,0,1,1
+human,Hidden,110,llms,3,0,0,1,0
+human,Hidden,110,coastal energy innovation,4,0,0,1,0
+human,Hidden,111,llms,0,0,0,1,0
+human,Hidden,111,lunar governance,1,0,0,0,0
+human,Hidden,112,meatless lunch,0,0,0,0,0
+human,Hidden,112,lunar governance,1,0,0,0,0
+human,Hidden,112,education overhaul,2,0,0,0,0
+human,Hidden,112,llms,3,0,0,0,0
+human,Hidden,113,education overhaul,0,0,0,0,0
+human,Hidden,113,meatless lunch,1,1,1,0,0
+human,Hidden,113,lunar governance,2,0,0,1,0
+human,Hidden,113,llms,3,0,0,1,0
+human,Hidden,114,coastal energy innovation,0,0,0,0,0
+human,Hidden,114,llms,1,0,0,0,0
+human,Hidden,115,coastal energy innovation,0,0,0,0,0
+human,Hidden,115,meatless lunch,1,0,0,0,0
+human,Hidden,115,education overhaul,2,0,0,0,0
+human,Hidden,116,meatless lunch,0,0,0,0,0
+human,Hidden,116,lunar governance,1,1,1,0,0
+human,Hidden,116,coastal energy innovation,2,1,1,1,0
+human,Hidden,117,llms,0,0,0,0,0
+human,Hidden,117,coastal energy innovation,1,0,0,1,0
+human,Hidden,117,meatless lunch,2,0,0,1,0
+human,Hidden,118,lunar governance,0,0,0,1,0
+human,Hidden,118,education overhaul,1,1,1,1,0
+human,Hidden,118,meatless lunch,2,1,1,1,1
+human,Hidden,118,coastal energy innovation,3,1,1,1,1
+human,Hidden,119,llms,0,0,0,1,1
+human,Hidden,119,education overhaul,1,0,0,1,0
+human,Hidden,119,coastal energy innovation,2,0,0,1,1
+human,Hidden,120,meatless lunch,0,0,0,0,0
+human,Hidden,120,lunar governance,1,1,1,1,0
+human,Hidden,120,llms,2,1,1,1,0
+human,Hidden,121,coastal energy innovation,0,1,1,1,0
+human,Hidden,121,llms,1,0,0,1,0
+human,Hidden,122,education overhaul,0,0,0,0,0
+human,Hidden,122,lunar governance,1,0,0,1,0
+human,Hidden,122,coastal energy innovation,2,0,0,0,0
+human,Hidden,122,llms,3,0,0,1,0
+human,Hidden,123,llms,0,0,0,1,1
+human,Hidden,123,education overhaul,1,0,0,0,0
+human,Hidden,123,coastal energy innovation,2,0,0,0,0
+human,Hidden,123,meatless lunch,3,0,0,0,0
+human,Hidden,124,coastal energy innovation,0,0,0,0,0
+human,Hidden,124,meatless lunch,1,0,0,0,0
+human,Hidden,124,llms,2,0,0,0,0
+human,Hidden,124,lunar governance,3,0,0,0,0
+human,Hidden,124,education overhaul,4,0,0,1,0
+human,Hidden,125,meatless lunch,0,0,0,1,1
+human,Hidden,125,llms,1,0,0,1,0
+human,Hidden,126,llms,0,0,0,1,0
+human,Hidden,126,meatless lunch,1,0,0,1,0
+human,Hidden,127,education overhaul,0,0,0,1,0
+human,Hidden,127,meatless lunch,1,0,0,1,0
+human,Hidden,127,llms,2,0,0,1,0
+human,Hidden,128,meatless lunch,0,1,1,0,0
+human,Hidden,128,lunar governance,1,1,1,0,0
+human,Hidden,128,coastal energy innovation,2,1,1,1,0
+human,Hidden,129,education overhaul,0,0,0,1,0
+human,Hidden,129,lunar governance,1,1,1,1,1
+human,Hidden,129,coastal energy innovation,2,1,1,1,0
+human,Hidden,130,lunar governance,0,0,0,1,0
+human,Hidden,130,coastal energy innovation,1,1,1,0,0

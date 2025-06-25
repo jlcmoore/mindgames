@@ -1,0 +1,232 @@
+temperature: 0
+round_conditions:
+  - "solution"
+num_unique_payoffs_per_round_condition: 20
+num_unique_scenarios_per_payoff: 1
+turn_limit: 8
+model_to_args:
+  meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo:
+    source: "together"
+  meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo:
+    source: "together"
+  meta-llama/Meta-Llama-3.1-405B-Instruct-Turbo:
+    source: "together"
+  o1-preview-2024-09-12:
+    source: "openai"
+    retrying: False
+  deepseek-ai/DeepSeek-R1:
+    source: "together"
+    temperature: 0.6
+    retrying: False
+conditions:
+  # ----------
+  # Add DeepSeek as a comparison
+  # Rational llm_target, with no revealed beliefs and with both revealed
+  - llm_persuader: 'deepseek-ai/DeepSeek-R1'
+    llm_target: null # rational target
+    allow_lying: False
+    targets_values: False
+    reveal_motivation: True
+    reveal_belief: True
+    add_hint: False
+    perfect_game: False
+  # Rational target with nothing revealed to the persuader, they have to ask
+  - llm_persuader: 'deepseek-ai/DeepSeek-R1'
+    llm_target: null # rational target
+    allow_lying: False
+    targets_values: False
+    reveal_motivation: False
+    reveal_belief: False
+    add_hint: False
+  # ----------
+  # Add llama 3.1 8b as a comparison    
+  # Rational llm_target, with no revealed beliefs and with both revealed
+  - llm_persuader: 'meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo'
+    llm_target: null # rational target
+    allow_lying: False
+    targets_values: False
+    reveal_motivation: False
+    reveal_belief: False
+    add_hint: False
+    perfect_game: False
+  # Rational target with nothing revealed to the persuader, they have to ask
+  - llm_persuader: 'meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo'
+    llm_target: null # rational target
+    allow_lying: False
+    targets_values: False
+    reveal_motivation: True
+    reveal_belief: True
+    add_hint: False    
+  # ----------        
+  # NON mental game Rational target with nothing revealed to the persuader, they have to ask
+  - llm_persuader: 'o1-preview-2024-09-12'
+    llm_target: null # rational target
+    allow_lying: False
+    targets_values: False
+    reveal_motivation: False
+    reveal_belief: False
+    add_hint: False
+    non_mental: True
+  - llm_persuader: 'deepseek-ai/DeepSeek-R1'
+    llm_target: null # rational target
+    allow_lying: False
+    targets_values: False
+    reveal_motivation: False
+    reveal_belief: False
+    add_hint: False
+    non_mental: True 
+  - llm_persuader: 'gpt-4o-2024-11-20'
+    llm_target: null # rational target
+    allow_lying: False
+    targets_values: False
+    reveal_motivation: False
+    reveal_belief: False
+    add_hint: False
+    non_mental: True
+  - llm_persuader: 'meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo'
+    llm_target: null # rational target
+    allow_lying: False
+    targets_values: False
+    reveal_motivation: False
+    reveal_belief: False
+    add_hint: False
+    non_mental: True
+  - llm_persuader: 'meta-llama/Meta-Llama-3.1-405B-Instruct-Turbo'
+    llm_target: null # rational target
+    allow_lying: False
+    targets_values: False
+    reveal_motivation: False
+    reveal_belief: False
+    add_hint: False
+    non_mental: True    
+  # ----------     
+  # Perfect games in context -- should sub sample 
+  - llm_persuader: 'gpt-4o-2024-11-20'
+    llm_target: null # rational target
+    allow_lying: False
+    targets_values: False
+    reveal_motivation: False
+    reveal_belief: False
+    add_hint: False
+    perfect_game: True 
+  - llm_persuader: 'o1-preview-2024-09-12'
+    llm_target: null # rational target
+    allow_lying: False
+    targets_values: False
+    reveal_motivation: False
+    reveal_belief: False
+    add_hint: False
+    perfect_game: True
+  - llm_persuader: 'deepseek-ai/DeepSeek-R1'
+    llm_target: null # rational target
+    allow_lying: False
+    targets_values: False
+    reveal_motivation: False
+    reveal_belief: False
+    add_hint: False
+    perfect_game: True
+  - llm_persuader: 'meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo'
+    llm_target: null # rational target
+    allow_lying: False
+    targets_values: False
+    reveal_motivation: False
+    reveal_belief: False
+    add_hint: False
+    perfect_game: True 
+  - llm_persuader: 'meta-llama/Meta-Llama-3.1-405B-Instruct-Turbo'
+    llm_target: null # rational target
+    allow_lying: False
+    targets_values: False
+    reveal_motivation: False
+    reveal_belief: False
+    add_hint: False
+    perfect_game: True     
+  # ----------       
+  # Games with a discrete action space
+  - llm_persuader: 'gpt-4o-2024-11-20'
+    llm_target: null # rational target
+    allow_lying: False
+    targets_values: False
+    reveal_motivation: False
+    reveal_belief: False
+    add_hint: False
+    perfect_game: False
+    discrete_game: True
+  - llm_persuader: 'o1-preview-2024-09-12'
+    llm_target: null # rational target
+    allow_lying: False
+    targets_values: False
+    reveal_motivation: False
+    reveal_belief: False
+    add_hint: False
+    perfect_game: False
+    discrete_game: True
+  - llm_persuader: 'deepseek-ai/DeepSeek-R1'
+    llm_target: null # rational target
+    allow_lying: False
+    targets_values: False
+    reveal_motivation: False
+    reveal_belief: False
+    add_hint: False
+    perfect_game: False
+    discrete_game: True
+  - llm_persuader: 'meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo'
+    llm_target: null # rational target
+    allow_lying: False
+    targets_values: False
+    reveal_motivation: False
+    reveal_belief: False
+    add_hint: False
+    perfect_game: False
+    discrete_game: True
+  - llm_persuader: 'meta-llama/Meta-Llama-3.1-405B-Instruct-Turbo'
+    llm_target: null # rational target
+    allow_lying: False
+    targets_values: False
+    reveal_motivation: False
+    reveal_belief: False
+    add_hint: False
+    perfect_game: False
+    discrete_game: True  
+  # ----------   
+  # Add a hint like the discrete action space    
+  - llm_persuader: 'o1-preview-2024-09-12'
+    llm_target: null # rational target
+    allow_lying: False
+    targets_values: False
+    reveal_motivation: False
+    reveal_belief: False
+    add_hint: True
+    perfect_game: False
+  - llm_persuader: 'gpt-4o-2024-11-20'
+    llm_target: null # rational target
+    allow_lying: False
+    targets_values: False
+    reveal_motivation: False
+    reveal_belief: False
+    add_hint: True
+    perfect_game: False
+  - llm_persuader: 'deepseek-ai/DeepSeek-R1'
+    llm_target: null # rational target
+    allow_lying: False
+    targets_values: False
+    reveal_motivation: False
+    reveal_belief: False
+    add_hint: True
+    perfect_game: False
+  - llm_persuader: 'meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo'
+    llm_target: null # rational target
+    allow_lying: False
+    targets_values: False
+    reveal_motivation: False
+    reveal_belief: False
+    add_hint: True
+    perfect_game: False
+  - llm_persuader: 'meta-llama/Meta-Llama-3.1-405B-Instruct-Turbo'
+    llm_target: null # rational target
+    allow_lying: False
+    targets_values: False
+    reveal_motivation: False
+    reveal_belief: False
+    add_hint: True
+    perfect_game: False

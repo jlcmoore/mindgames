@@ -1,0 +1,9 @@
+name: env-mindgames
+channels:
+  - defaults
+dependencies:
+  - pip
+  - cudatoolkit
+  - python=3.10
+  - pip:
+    - modelendpoints[linux] @ git+https://github.com/jlcmoore/modelendpoints

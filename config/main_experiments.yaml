@@ -1,0 +1,85 @@
+temperature: 1 # Setting the temperature to 1 to equalize as o3 only accepts 1
+round_conditions:
+  - "solution"
+num_unique_payoffs_per_round_condition: 40
+num_unique_scenarios_per_payoff: 5
+turn_limit: 8
+model_to_args:
+  o1-preview-2024-09-12:
+    source: "openai"
+    retrying: False
+  meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo:
+    source: "together"
+    retrying: True
+  meta-llama/Meta-Llama-3.1-405B-Instruct-Turbo:
+    source: "together"
+    retrying: True
+conditions:
+  # Rational llm_target, with no revealed beliefs and with both revealed
+  - llm_persuader: 'o1-preview-2024-09-12'
+    llm_target: null # rational target
+    allow_lying: False
+    targets_values: False
+    reveal_motivation: True
+    reveal_belief: True
+    add_hint: False
+    perfect_game: False
+  # Rational target with nothing revealed to the persuader, they have to ask
+  - llm_persuader: 'o1-preview-2024-09-12'
+    llm_target: null # rational target
+    allow_lying: False
+    targets_values: False
+    reveal_motivation: False
+    reveal_belief: False
+    add_hint: False    
+  # Rational llm_target, with no revealed beliefs and with both revealed
+  - llm_persuader: 'gpt-4o-2024-11-20'
+    llm_target: null # rational target
+    allow_lying: False
+    targets_values: False
+    reveal_motivation: True
+    reveal_belief: True
+    add_hint: False
+    perfect_game: False
+  # Rational target with nothing revealed to the persuader, they have to ask
+  - llm_persuader: 'gpt-4o-2024-11-20'
+    llm_target: null # rational target
+    allow_lying: False
+    targets_values: False
+    reveal_motivation: False
+    reveal_belief: False
+    add_hint: False
+  # Rational llm_target, with no revealed beliefs and with both revealed
+  - llm_persuader: 'meta-llama/Meta-Llama-3.1-405B-Instruct-Turbo'
+    llm_target: null # rational target
+    allow_lying: False
+    targets_values: False
+    reveal_motivation: False
+    reveal_belief: False
+    add_hint: False
+    perfect_game: False
+  # Rational target with nothing revealed to the persuader, they have to ask
+  - llm_persuader: 'meta-llama/Meta-Llama-3.1-405B-Instruct-Turbo'
+    llm_target: null # rational target
+    allow_lying: False
+    targets_values: False
+    reveal_motivation: True
+    reveal_belief: True
+    add_hint: False
+  # Rational llm_target, with no revealed beliefs and with both revealed
+  - llm_persuader: 'deepseek-ai/DeepSeek-R1'
+    llm_target: null # rational target
+    allow_lying: False
+    targets_values: False
+    reveal_motivation: True
+    reveal_belief: True
+    add_hint: False
+    perfect_game: False
+  # Rational target with nothing revealed to the persuader, they have to ask
+  - llm_persuader: 'deepseek-ai/DeepSeek-R1'
+    llm_target: null # rational target
+    allow_lying: False
+    targets_values: False
+    reveal_motivation: False
+    reveal_belief: False
+    add_hint: False

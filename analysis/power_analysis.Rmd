@@ -1,0 +1,472 @@
+---
+title: "Mindgames power analysis"
+output:
+  html_document:
+    toc: yes
+    toc_float: true
+    theme: flatly
+    highlight: kate
+    code_folding: hide
+date: "2025-01-15"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+set.seed(42)
+```
+
+# Simulate data
+
+Here I've run a simulated power analysis where we generate data according to certain assumptions about the effects we're likely to see, how many trials we run, and the variance we expect by ppts and trials. Then we run our planned analysis code on the simulated data and see how often we recover the effects in our statistical tests.
+
+You can see the code to generate results below:
+
+
+```{r}
+simulate_mindgames <- function(
+    n_participants = 100,     # Number of human participants
+    trials_per_human = 5,     # Number of trials each human participant completes
+    
+    # Base success rates for different conditions
+    base_human_success_rate = 0.4,    # Base success rate for humans
+    base_llm_success_rate = 0.1,      # Base success rate for LLMs
+    reveal_boost_human = 0.15,        # How much reveal condition improves performance for humans
+    reveal_boost_llm = 0.25,          # How much reveal condition improves performance for llms
+    
+    # Random effects parameters
+    participant_sd = 0.5,    # Standard deviation for random participant effects
+    trial_sd = 0.1         # Standard deviation for random trial effects
+) {
+  
+  # Just make the number of LLM trials equal the number of human trials
+  n_llm_trials = n_participants * trials_per_human
+
+  # Generate random participant effects and assign conditions between participants
+  participants <- tibble(
+    participant_id = 1:n_participants,
+    participant_effect = rnorm(n_participants, 0, participant_sd),
+    # Assign mental_state between participants
+    mental_state = sample(
+      rep(c("reveal", "no_reveal"), length.out = n_participants),
+      n_participants
+    )
+  )
+  
+  # Generate human data
+  human_data <- expand_grid(
+    participant_id = 1:n_participants,
+    trial_num = 1:trials_per_human
+  ) %>%
+    # Join participant random effects and condition
+    left_join(participants, by = "participant_id") %>%
+    # Add trial-level random effects
+    group_by(participant_id) %>%
+    mutate(
+      trial_effect = rnorm(trials_per_human, 0, trial_sd)
+    ) %>%
+    ungroup() %>%
+    # Calculate success probability
+    mutate(
+      base_prob = base_human_success_rate,
+      reveal_effect = if_else(mental_state == "reveal", reveal_boost_human, 0),
+      success_prob = plogis(qlogis(base_prob) + 
+                              participant_effect + 
+                              trial_effect) +
+                              reveal_effect,
+      # Generate outcomes
+      success = rbinom(n(), 1, success_prob),
+      persuader_type = "human"
+    )
+  
+  
+  # Generate LLM data
+  llm_data <- tibble(
+    trial_num = 1:n_llm_trials,
+    mental_state = rep(c("reveal", "no_reveal"), length.out = n_llm_trials),
+    trial_effect = rnorm(n_llm_trials, 0, trial_sd)
+  ) %>%
+    # Calculate success probability
+    mutate(
+      base_prob = base_llm_success_rate,
+      reveal_effect = if_else(mental_state == "reveal", reveal_boost_llm, 0),
+      success_prob = plogis(qlogis(base_prob) + 
+                              trial_effect) +
+                              reveal_effect,
+      # Generate outcomes
+      success = rbinom(n(), 1, success_prob),
+      persuader_type = "llm",
+      participant_id = 0
+    )
+  
+  # Combine and clean datasets
+  combined_data <- bind_rows(
+    human_data %>% 
+      select(persuader_type, mental_state, participant_id, trial_num, success),
+    llm_data %>%
+      select(persuader_type, mental_state, trial_num, success)
+  ) %>%
+    mutate(
+      persuader_type = as.factor(persuader_type),
+      mental_state = as.factor(mental_state)
+    )
+  
+  return(combined_data)
+}
+
+```
+
+All of these analyses are based on assumptions about variance by ppt and trial, which are not necessarily justifiable, so just a rough guide.
+
+I’ve tested that we can run all of these with mixed effects models, but haven’t used them for the power analysis as it’s challenging to simulate data so that it meets all the assumptions and the model converges nicely. In general, I don’t think we should expect to need more data for the MEMs, and I often do power analysis with simple linear models for this reason. So essentially I think we can use these estimates and still plan to run the mixed effects models in our actual analysis.
+
+Let me know if you see any issues with how I've set this up!
+
+Here's an example of how the data looks with the default params:
+
+```{r}
+
+example_data <- simulate_mindgames()
+head(example_data)
+
+```
+
+```{r}
+
+summary(example_data)
+
+```
+
+
+
+```{r}
+
+example_data %>%
+  ggplot(aes(x = persuader_type, y = success, fill = mental_state)) + 
+  stat_summary(geom = "bar", fun = "mean", position = position_dodge()) + 
+    theme_minimal()
+
+
+```
+
+
+# H1
+
+For H1 we’re using a logistic regression to ask “Is the human success rate in the no_reveal condition significantly greater than 0.1”? 
+
+Why are we using a baseline of 0.1? Essentially we want to check whether performance is above chance. It's not clear what chance performance would mean on this task. AFAIU, in critical trials, if the ppt does nothing, or types randomly, they will lose. So chance could maybe be 0? But it's hard to test whether something is significantly different from 0 so we use a small constant instead (a success rate of 10%). There are arguments for making this higher or lower but I think it's reasonable.
+
+## Example
+
+Here's how this looks with the example data above:
+
+```{r}
+chance_prob <- 0.1
+chance_logodds <- qlogis(chance_prob)
+
+model_data <- example_data %>%
+  filter(persuader_type == "human", 
+         mental_state == "no_reveal") %>%
+  # Add offset column
+  mutate(offset_term = chance_logodds)
+
+model <- glm(success ~ offset(offset_term) + 1,
+               family = binomial, 
+               data = model_data)
+
+summary(model)
+
+```
+
+The intercept is significantly different from our baseline (the units here are in logits, a transformation of probability space which allow you to use linear regressions. lmk if you're confused about this and want to understand more).
+
+## Power analysis
+
+Now we generate data under different assumptions, varying the no_reveal success rate and the number of participants. The no_ppts here is the total number of human ppts. So only half of these are actually involved in the test (as the other half are in the reveal condition).
+
+It looks like we’re not going to get sufficient power to detect an effect of 0.15 vs 0.1 (which tbh I think is also theoretically good, that’s too small of a difference to care about). For a true SR of 0.2 (a difference of 0.1 from the baseline) we hit 80% power (we detect the effect in 80% of simulations) at 30 total ppts (so only 15 in the no_reveal cond).
+
+```{r}
+
+test_h1 <- function(data, chance_prob = 0.1) {  # default to 10% chance success
+  # Convert chance probability to log odds for offset
+  chance_logodds <- qlogis(chance_prob)
+  
+  # Filter for human, no_reveal condition
+  model_data <- data %>%
+    filter(persuader_type == "human", 
+           mental_state == "no_reveal") %>%
+    # Add offset column
+    mutate(offset_term = chance_logodds)
+  
+  # Mixed effects Model
+  # model <- glmer(success ~ offset(offset_term) + 1 + (1|participant_id), 
+  #                family = binomial, 
+  #                data = model_data)
+  
+  # Plain logistic regression
+  model <- glm(success ~ offset(offset_term) + 1,
+                 family = binomial, 
+                 data = model_data)
+
+  
+  # Extract fixed effect coefficient and p-value
+  coef <- summary(model)$coefficients[1, "Estimate"]
+  p_value <- summary(model)$coefficients[1, "Pr(>|z|)"]
+  
+  return(list(
+    estimate = plogis(coef + chance_logodds),  # Convert to probability
+    p_value = p_value,
+    above_chance = coef > 0  # Is performance above chance level?
+  ))
+}
+
+power_analysis_h1 <- function(
+    n_sims = 100,
+    true_rates = c(0.15, 0.2, 0.3),
+    n_ppts = c(10, 15, 20, 25, 30, 35, 40, 50, 60, 80, 100)
+) {
+  # Create results grid
+  results <- expand_grid(
+    true_rate = true_rates,
+    n_ppts = n_ppts
+  ) %>%
+    group_by(true_rate, n_ppts) %>%
+    summarise(
+      power = mean(replicate(n_sims, {
+        data <- simulate_mindgames(
+          n_participants = n_ppts,
+          base_human_success_rate = true_rate,
+          participant_sd = 0.5
+        )
+        test_h1(data)$p_value < 0.05
+      })),
+      .groups = 'drop'
+    )
+  
+  # Plot
+  ggplot(results, aes(x = n_ppts, y = power, color = factor(true_rate))) +
+    geom_line() +
+    geom_point() +
+    geom_hline(yintercept = 0.8, linetype = "dashed", color = "red") +
+    scale_y_continuous(limits = c(0, 1)) +
+    labs(x = "Number of Participants",
+         y = "Power",
+         color = "True Rate") +
+    theme_minimal()
+}
+
+power_analysis_h1()
+
+```
+
+# H2
+
+## Example
+
+For H2 we're asking "do human ppts perform significantly better in reveal vs no_reveal". Here's how the model looks with our example data:
+
+```{r}
+
+model_data <- example_data %>%
+  filter(persuader_type == "human")
+
+model <- glm(success ~ mental_state, 
+             family = binomial, 
+             data = model_data)
+
+summary(model)
+
+```
+
+We see a significant positive effect of reveal on the success rate!. The intercept here represents 50% and we don't care about it in this analysis.
+
+## Power Analysis
+
+
+Here we use all the human ppts, set the expected no_reveal SR at 0.1 and how many participants we need to detect different sizes of "reveal effect" (the difference in success rate between reveal and no_reveal). Reveal effects of either 0.05 or 0.1 are probably not detectable with < 100 ppts. But for 0.15 we hit 80% power at around 40-50 total participants.
+
+
+```{r}
+
+test_h2 <- function(data) {
+  # Filter for human data only
+  model_data <- data %>%
+    filter(persuader_type == "human")
+  
+  # Fit model testing reveal effect
+  # model <- glmer(success ~ mental_state + (1|participant_id), 
+  #                family = binomial, 
+  #                data = model_data)
+
+  model <- glm(success ~ mental_state, 
+               family = binomial, 
+               data = model_data)
+  
+  # Extract reveal coefficient and p-value
+  coef <- summary(model)$coefficients[2, 1]
+  p_value <- summary(model)$coefficients["mental_statereveal", "Pr(>|z|)"]
+  
+  return(list(
+    estimate = plogis(coef),  # Convert to probability scale
+    p_value = p_value,
+    positive_effect = coef > 0
+  ))
+}
+
+power_analysis_h2 <- function(
+    n_sims = 100,
+    reveal_effects = c(0.05, 0.1, 0.15, 0.2, 0.3),  # Difference between conditions
+    n_ppts = c(10, 15, 20, 25, 30, 35, 40, 50, 60, 80, 100)
+) {
+  # Create results grid
+  results <- expand_grid(
+    reveal_effect = reveal_effects,
+    n_ppts = n_ppts
+  ) %>%
+    group_by(reveal_effect, n_ppts) %>%
+    summarise(
+      power = mean(replicate(n_sims, {
+        data <- simulate_mindgames(
+          n_participants = n_ppts,
+          base_human_success_rate = 0.1,
+          reveal_boost_human = reveal_effect
+        )
+        test_h2(data)$p_value < 0.05
+      })),
+      .groups = 'drop'
+    )
+  
+  # Plot
+  ggplot(results, aes(x = n_ppts, y = power, color = factor(reveal_effect))) +
+    geom_line() +
+    geom_point() +
+    geom_hline(yintercept = 0.8, linetype = "dashed", color = "red") +
+    scale_y_continuous(limits = c(0, 1)) +
+    labs(x = "Number of Participants",
+         y = "Power",
+         color = "Reveal Effect") +
+    theme_minimal()
+}
+
+power_analysis_h2()
+
+```
+
+# H3-5
+
+I haven’t simulated H3 & H4. If we use the same number of LLM trials as we do human trials, they should come out statistically very similar. So, say, if we have 50 ppts * 5 trials, we want 250 o1 trials (and I guess the same for the other models).
+
+H5 is conceptually the same as H2 and H4 (logistic regression with a categorical predictor) but we’ll have 2x as much data (human and llm data) so I also haven’t simulated that specifically (assuming it will be less data hungry than H2 or H4).
+
+# H6
+
+I’ve done H6 because it’s more complicated and involves an interaction. The key effect we care about is mental_state:persuader_type (i.e. is the effect of mental_state greater for llms than for humans?).
+
+## Example
+
+We see significant main effects of reveal (increases success) and persuader type (llms are worse). Plus we see a positive interaction of reveal:llm (reveal has a bigger positive effect for llms than humans).
+
+```{r}
+
+model <- glm(success ~ mental_state * persuader_type, 
+             family = binomial, 
+             data = example_data)
+
+summary(model)
+
+```
+
+## Power analysis
+
+Here, I’ve assumed the human no_reveal success rate is 0.4 and the human reveal success rate is 0.5 (a reveal effect of 0.1). I've assumed the llm no_reveal rate is 0.1 and varied the llm success rate in the reveal condition.
+
+The plot shows the human:reveal interaction effect (i.e. how much greater is success rate in the reveal condition minus the no_reveal condition for llms vs humans).
+
+For small interaction effects (0.05 and 0.1) again we don’t reliably detect this even with 100 ppts). For an effect of 0.15 (so the llm SR for the reveal condition is 0.2 + 0.15 = 0.35) we hit 80% power at 50 ppts again.
+
+```{r}
+
+
+test_h6 <- function(data) {
+  # Filter for human data only
+  model_data <- data
+  
+  # Fit model testing reveal effect
+  # model <- glmer(success ~ mental_state + (1|participant_id), 
+  #                family = binomial, 
+  #                data = model_data)
+  model <- glm(success ~ mental_state * persuader_type, 
+               family = binomial, 
+               data = model_data)
+  
+  # Extract reveal coefficient and p-value
+  coef <- summary(model)$coefficients[4, 1]
+  p_value <- summary(model)$coefficients[4, "Pr(>|z|)"]
+  
+  return(list(
+    estimate = plogis(coef),  # Convert to probability scale
+    p_value = p_value,
+    positive_effect = coef > 0
+  ))
+}
+
+power_analysis_h6 <- function(
+    n_sims = 100,
+    base_human_success_rate = 0.4,
+    base_llm_success_rate = 0.1,
+    reveal_boost_human = 0.1,
+    reveal_boost_llm = c(0.15, 0.2, 0.25, 0.3),
+    n_ppts = c(10, 20, 30, 40, 45, 50, 55, 60, 80, 100)
+) {
+  # Create results grid
+  results <- expand_grid(
+    reveal_boost_llm = reveal_boost_llm,
+    n_ppts = n_ppts
+  ) %>%
+    group_by(reveal_boost_llm, n_ppts) %>%
+    summarise(
+      power = mean(replicate(n_sims, {
+        data <- simulate_mindgames(
+          n_participants = n_ppts,
+          base_llm_success_rate = base_llm_success_rate,
+          base_human_success_rate = base_human_success_rate,
+          reveal_boost_llm = reveal_boost_llm,
+          reveal_boost_human = reveal_boost_human
+        )
+        test_h6(data)$p_value < 0.05
+      })),
+      .groups = 'drop'
+    )
+  
+  results <- results %>%
+    mutate(
+      llm_reveal_ixn = reveal_boost_llm - reveal_boost_human
+    )
+  # Plot
+  ggplot(results, aes(x = n_ppts, y = power, color = factor(llm_reveal_ixn))) +
+    geom_line() +
+    geom_point() +
+    geom_hline(yintercept = 0.8, linetype = "dashed", color = "red") +
+    scale_y_continuous(limits = c(0, 1)) +
+    labs(x = "Number of Participants",
+         y = "Power",
+         color = "Human:Reveal Interaction Effect") +
+    theme_minimal()
+}
+
+power_analysis_h6()
+
+
+```
+
+
+# Conclusion
+
+Overall I think this suggests that 50 total (25 per condition) is a reasonable minimum number, and something slightly above that would be safer/more conservative. 
+
+All of these assume 5 critical trials per participant and we’d have to increase n if we want to do fewer than that. We should also assume some loss of data (e.g. from ppts not completing the expt) which might lead us toward 70 or 80 rather than 50 or 60. 
+
+What do you think?
+
+
