@@ -8,268 +8,92 @@
 (_/\/\_)(____)(_)\_)(____/    \___/(__)(__)(_/\/\_)(____)(___/
 ```
 
-Interactive, planning-based Theory of Mind and persuasion tasks.
+This is the repository for the paper [Do Large Language Models Have a Planning Theory of Mind? Evidence from MINDGAMES: a Multi-Step Persuasion Task](http://arxiv.org/abs/2507.16196), which appeared at the Conference on Language Modeling in 2025.
 
-We measure an agent's ability to model its interlocutor's mental state through game-based persuasive dialogue.
+Here is a demo of our task: <https://mindgames.camrobjones.com>
 
-## Set-up
+*Interactive, planning-based Theory of Mind and persuasion tasks.*
 
-### For macOS/Linux - Install:
+## Executive Summary
 
-- `Make` (e.g. `brew install make`)
+Mindgames is a novel persuasion-based Theory of Mind task in which the persuader must strategically reveal or withhold information about policy features to alter a target's beliefs and secure their preferred choice, thereby capturing the causal, social planning at the heart of mindreading. In comparing human participants to several leading LLMs, we find that only humans consistently engage in the belief- and preference-seeking needed to plan effective interventions---highlighting a fundamental gap in LLMs' social-causal reasoning.
 
-- `python>=3.10` (e.g. `brew install python@3.10`)
 
-- [`jupyter`](https://jupyter.org/install).
+### Introduction
 
-- Install [XQuartz](https://www.xquartz.org/) if on a mac an trying to run the Rscripts
+There's been a lot of excitement in cognitive science circles over the last 3 years about large language models (LLMs) and their purported capacities. Perhaps the most surprising finding so far is that LLMs do remarkably well on some highly influential measures of Theory of Mind, such as the false belief task (for the uninitiated: in this task, Sally puts her marble in a basket and leaves a room, then Anne moves the marble to a box while she's gone – one must recognise that Sally will look in the basket when she returns to the room, because there's where she thinks her marble is, rather than in the box where it really is). 
 
-Run `make init`
+Since Theory of Mind denotes our capacity to predict, understand, and explain other people's behaviour in terms of mental states, this is a puzzling capacity for a language model to display. Language models are designed to perform weighted predictions of sequences of linguistic tokens, to process patterns in text rather than beliefs, desires, or intentions. They don't seem like the kind of system that could embody a Theory of Mind. 
 
-Run `source env-mindgames/bin/activate`
+These findings have given us, the researchers, pause. As an interdisciplinary team---amongst us a computer scientist, a cognitive scientist, a psychologist, a human-computer interaction researcher, and a philosopher---we came to this project with different baseline assumptions. Some of us have even reacted with outright incredulity. The findings have pushed us to reflect on both our conceptualisation and  common measures of Theory of Mind.
 
-### On a GPU machine
+Existing studies of LLM Theory of Mind face several challenges, which we discuss below. By developing a new type of Theory of Mind task, we can make marked progress on both our general understanding of Theory of Mind and our research methods for evaluating humans and artificial intelligences alike. 
 
-`$ make init-conda`
+### Background
 
+Let's first take a brief look at the false belief task, because it will act as a foil throughout. The task can be seen in [this video](https://www.youtube.com/watch?v=RUpxZksAMPw).
 
-(For testing `vllm` on a machine with 8, 25Gb GPUs:
+The false belief task is highly influential and gets at the important idea: that our thoughts are perspectival---they take the world to be a particular way, even though the world can be in another way. 
 
-```
-vllm serve \
-meta-llama/Llama-2-70b-chat-hf  \
---dtype auto \
---trust-remote-code \
---tensor-parallel-size 8 \
---gpu-memory-utilization .8
-```
-)
+What does a good Theory of Mind task for LLMs look like, then? 
 
-### For Windows - Install:
+First, a Theory of Mind task should get at the core of the Theory of Mind construct. While Theory of Mind is a somewhat sprawling construct, one important feature is highlighted a lot: it involves a causal model of the mind. This means that a person with Theory of Mind should understand how different mental states interact to produce behaviour. For example, if you went to look in a fridge, and I want to understand why, I can appeal to causal relationships. Perhaps earlier you saw that I put beer in the fridge, leading you to form a belief about the location of the beer and the heat outside has given you a craving for a cold beverage. These mental states causally interact and they generate your searching behavior. Not all Theory of Mind tasks get at this causal understanding, though. In particular, studies using the false belief task do not, even if they do seem to get at some understanding of perspectives. 
 
-- `python>=3.10`: Download and install from python.org (check "Add Python to PATH")
+Second, a Theory of Mind task should at least approximate the natural context of the way we use Theory of Mind in real-life. While we sometimes engage in the kind of predictions that the false belief task measures, where we are spectators to someone else's actions. But Theory of Mind plays its primary role in our social interactions; that is,  in conversations, when we coordinate and cooperate, and when we compete. 
 
-- [`jupyter`](https://jupyter.org/install).
+Third, an obvious problem with studies of LLM Theory of Mind is that because paradigms like the false belief task are both old and incredibly popular, a language model will likely have plenty of false belief tasks in its training data. A good task should be novel enough that it doesn't appear in training data, so we can test reasoning rather than memorisation.
 
-Run `setup.bat` (run as administrator if you encounter permission issues)
+Mark Ho and his collaborators capture these ideas in the notion of planning with Theory of Mind. When we need to get other people to behave in line with our own goals, for benevolent or malevolent reasons, our Theory of Mind can let us plan interventions on other people's mental states to change their behaviors. One case where this kind of planning is obvious is in persuasive dialogue. For example, if you want me to pet a cat, and I don't want to because I think it'll scratch me, the ability to plan with Theory of Mind might lead you to to tell me that the cat is actually very friendly, because this intervention would likely be a good way to get me to pet the cat. 
 
-Run `\env-mindgames\Scripts\activate`
+A causal understanding of minds presents itself in the planned interventions that we use to persuade people. This is the core of our new Theory of Mind task, Mindgames.
 
-### Environment variables
+### Method
 
-Store the following as environment variables or pass them in as arguments.
+Mindgames is a game where a persuader attempts to persuade a target to agree with their preferred policy proposal. The target is played by an artificial agent with a limited range of canned responses. This target has a number of policy preferences that it will reveal to the persuader if asked, and if it finds out that some policy fits its preferences better than its initial policy choice, it will vote for this more attractive policy. 
 
-- [HF_HOME](https://huggingface.co/docs/huggingface_hub/main/en/package_reference/environment_variables#hfhome)
-- [HF_TOKEN](https://huggingface.co/docs/huggingface_hub/main/en/package_reference/environment_variables#hftoken)
-- [OPENAI_API_KEY](https://platform.openai.com/api-keys)
-- [TOGETHER_API_KEY](https://docs.together.ai/docs/quickstart)
-- [ANTHROPIC_API_KEY](https://docs.anthropic.com/en/api/getting-started)
+![](images/image1.png)  
 
-E.g.:
- - macOS/Linux: `echo export HF_HOME="<path>"' >> ~/.zshrc`
- - Windows: System > "Advanced system settings" > "Environment variables" > Under "User variables" click "New" and add each variable
+Here's a common setup for a persuasion game. A scenario on AI safety is outlined and three possible policy proposals are presented, with different features. One proposal (B) will increase safety and control measures but at the cost of development speed. Another proposal will prioritise public trust and development speed, but at the cost of safety and control (A). 
 
-Or pass as arguments: `OPENAI_API_KEY=<key> make test`
+We can stipulate preferences for our participants who will take on the role of the persuader, and for the target. In the game above, our persuader dislikes safety and  control but values public trust and development speed, so they would prefer proposal A. The goal is then to get the Target to agree with this proposal.
 
-### Web App Setup
+The twist of this task is that to test whether our persuaders make good interventions on the Targets beliefs, we can selectively hide features of each policy proposal. 
 
-To set up the frontend to run locally, you will need to have Node.js and npm installed.
+![](images/image2.png)
 
-1. **Install Node.js and npm**:
-   - macOS/Linux: `brew install node`
-   - Windows: [Download Node.js](https://nodejs.org) (this will also install npm).
+The magnifying glasses here indicate that these are features of the policy proposals that the Target doesn't know about. It's up to the Persuader whether they would like to reveal these features to the Target. The Persuader can choose to reveal these hidden features of the proposals to the Target, thereby intervening on the Targets beliefs. Of course there is the risk of revealing too much information, such as a hidden drawback that the Target won't like, or revealing information that will push the target to prefer the wrong proposal.
 
-2. (*Install and build the frontend*:)
-   Only necessary if `make build` fails. After cloning the repository, navigate to the `frontend` directory and run:
+A good Persuader may tackle Mindgames like the example on the left. First, the Persuader figures out what the Target knows and what they prefer, thereby identifying their beliefs and desires. They then use this information to selectively reveal information about the proposals that should nudge the Target to prefer proposal A, which is the Persuaders own preferred policy. Here the Persuader notes that the Target doesn't like fast development, and so reveals that proposal A will actually decrease development speed, while also highlighting that the competing proposal C will increase development speed.  
+Here we propose that the Persuader shows a sensitivity to how the Targets beliefs and desires combine to generate their choice of proposal. They demonstrate a capacity to plan with Theory of Mind by strategically intervening on some of the Target's beliefs to get them to choose the desired proposal. 
 
-   ```
-   npm install
-   npm run build
-   ```
-### Merging
+We cancontrast this version of Mindgames, where some features of the policies are *hidden*, with a simpler version of Mindgames that is designed to require less planning.his allows us to compare how well Humans and LLMs can use Theory of Mind to plan interventions. 
 
-If you have a conflict in a `*.ipynb` file run `nbdime mergetool`
+The simpler version of Mindgames has all features *revealed* to both players and is more like a coordination game, where participants must report preferences and choose a proposal that makes for the best compromise. While this kind of coordination may also engage some level of Theory of Mind in principle, it is comparatively much simpler than the multistep reasoning it takes to figure out an appropriate intervention that would bring about the desired action from the Target. 
 
-### Example Game
+We recruited 124 humans, collecting data from a total of 202 trials of the *hidden* condition and 199 trials of the *revealed* condition of Mindgames. We then compared the human results to the performance of 200 trials on each condition from some of the major LLMs: o1, DeepSeek, GPT4o, and two versions of Llama. 
 
-### Generating the payoff matrices
+### Results
 
-We have already generated the relevant matricies. This step is only necessary if you would like to regenerate them.
+![](images/image3.png)
 
-```
-$ make_games --save-games --max-solutions 10000 --n-games-to-save 100
-$ make_games --save-games --non-solutions --difficulty can-win --max-solutions 10000 --n-games-to-save 100
-$ make_games --save-games --non-solutions --difficulty always-win --max-solutions 10000 --n-games-to-save 100
-$ make_games --save-games --non-solutions --difficulty never-win --max-solutions 10000 --n-games-to-save 100
-```
+Let's start by pointing out the obvious. When it comes to the simple coordination game in the *Revealed* condition, two language models (o1 and DeepSeek) clearly outperformed our human participants. 
 
-### Running an Example Game (rational target only)
+Crucial for our assessment of Theory of Mind capacities in our different subjects however, humans do significantly better than all language models, and in particular, some language models don't clear a success rate above chance (our paper has details on how we work out a chance rate for a task like this). 
 
-`$ play_rational_target`
+Still, these success rates aren't through the roof, even for our human participants. Although some human participants do really well on Mindgames, apparently a large number of participants seems to drag down mean performance on the task. Mindgames is clearly a pretty difficult task, even for adult humans, and this may both reflect that it's simply a complicated game to understand, but also that this kind of planning with Theory of Mind can be pretty difficult for us! 
 
-### Running the Human-{Human, Rational Target, LLM} Experiments
+We also found that humans and LLMs approach Mindgames very differently! The plot below shows the average number of times where our participants tried to appeal to their interlocutor's mental states. This means that they both tried to figure out what their opponents knew about the proposals and what features of these proposals they liked.  
 
-We use [FastAPI](https://fastapi.tiangolo.com/):
+![](images/image4.png)
 
-`$ fastapi run main.py`
+### Discussion
 
-This will start a local server, usually accessible at `http://0.0.0.0:8000/` (or `localhost` if you run `dev`).
+The kind of information that can be obtained through inquiring about mental states is very important to doing well in Mindgames, because it means that the Persuader is collecting information that allows them to make better interventions. Remember that a good intervention requires you to know what your opponent likes (so you can reveal appealing features and keep unappealing features hidden) and to know what they know (so you can choose novel information to reveal). The only language model that seemed to engage in this kind of information seeking was one of the Llama models, which performed a tad above chance in the *Hidden* condition. 
 
-(On our personal server run `make release`.)
+To our minds, these findings reflect that humans more successfully plan using Theory of Mind, which perhaps reflects a deeper difference in capacities that other studies have failed to pick up on. Additionally, and importantly,humans appear to be more active planners, in that we seem to engage in much more information seeking to support successful interventions. In general, the failures of the LLMs seem to arise precisely because they do not care to ask about beliefs and preferences (save the surprising performance of o1, which manages to do decently well on the *Hidden* condition, even if it only very rarely makes mental state appeals). 
 
-NB: To use the development only features (such as typing in  `'/decide'` as a message to force a round to conclude), pass `DEV_ENVIRONMENT=True fastapi {run, dev} main.py`.
+In the end, Mindgames seems to us to be a promising new task framework that gets at a crucial dimension of Theory of Mind that has not been explored enough, be it in humans or LLMs. It provides a corrective to several existing studies in the field and draws our attention to a near ubiquitous and profoundly social aspect of Theory of Mind. 
 
-Save the data from the database in `results/` with this command:
-
-`$ read_database [--database <path_to_database>] save-rounds`
-
-NB: Run a command like this to review sent messages before pushing to version control (for IRB). (Further validate by running `python scripts/filter_pii.py`.)
-
-- `$ read_database --log debug --database database.db save-rounds > temp.txt`
-
-Get bonus information from the database in `results/` with this command:
-
-`$ read_database [--database <path_to_database>] get-bonuses` 
-
-(Then open the file `bonuses.csv` copy it and upload it to the "Bulk bonus payment" dialogue on Prolific.)
-
-To extract just the surveys run `read_database --database <databse> save-surveys`. These will be saved to a file `completed-surveys_<date>.csv` inside of the condition directory.
-
-#### Example from figure
-
-To find the model id of the example from the figure run the following.
-
-`sqlite3 database.db`
-
-```sql
-select id from model where data == '{"utilities": {"A": {"x": -1, "y": -1, "z": 0}, "B": {"x": -1, "y": -1, "z": 1}, "C": {"x": 0, "y": 1, "z": 1}}, "hidden": {"A": {"x": false, "y": true, "z": false}, "B": {"x": false, "y": true, "z": true}, "C": {"x": false, "y": true, "z": false}}, "ideal_revealed": {"A": {"x": false, "y": true, "z": false}, "B": {"x": false, "y": false, "z": false}, "C": {"x": false, "y": true, "z": false}}, "target_coefficients": {"x": 0, "y": -1, "z": 1}, "persuader_coefficients": {"x": 0, "y": 0, "z": -1}, "proposals": ["A", "B", "C"], "attributes": ["x", "y", "z"], "max_hidden_utilities": 4}';
-```
-
-
-### Running the LLM-LLM Experiments
-
-This command runs the configuration file in `config/llmllm.yaml`, creating a series of games and collecting the responses of various LLMs.
-
-`$ llmllm --config main_experiment.yaml`
-
-(Also run `$ random_baseline` for an emprical measure of what an agent would score if they randomly disclose `n` pieces of information over the game.)
-
-(Run `$ llmllm --config config/validation.yaml` for various other optional validation experiments. These run on a reduced sample.)
-
-Killing the job with `CTRL-C`. The script will output where it has saved the intermediary results. You may re-run the script passing in the intermediary result as an argument `—-previous-condition <FILENAME>`. Then you just keep running that script if the run fails.
-
-Adjust the parameters at the top of your config file to run fewer trials just as a test. 
-
-e.g.:
-```
-num_unique_payoffs_per_round_condition: 1 # was `20`
-num_unique_scenarios_per_payoff: 1
-```
-
-## Analysis
-
-In the `analysis` directory.
-
-Run commands like the following to compile Rmarkdown notebooks
-
-`Rscript -e "rmarkdown::render('e1_analysis.Rmd')"`
-
-Or run `jupyter notebook` for the iPython notebooks.
-
-Run the following to estimate and plot the random baseline probability:
-
-`python scripts/random_choice_baseline.py`
-
-## Tests
-
-For basic tests, run:
-
-- macOS/Linux: `make test`
-- Windows: # TODO
-
-For basic tests which include querying LLMs (and require you to have the API keys), run:
-
-- macOS/Linux: `make test-query`
-- Windows: # TODO
-
-For basic tests which include batch LLM calls (only OpenAI and VLLM) (This takes a while and requires you to have the API keys), run:
-
-- macOS/Linux: `make test-batch`
-- Windows: # TODO
-
-For all tests, including the long-running csp and LLM queries, run:
-
-- macOS/Linux: `make test-all`
-- Windows: # TODO
-
-## Contributing
-
-Aim to [`black`]( https://black.readthedocs.io) your code (e.g. `black src`).
-
-Also use `pylint` (e.g. `pylint src` or just `darker --lint pylint src` which only applies pylint to the changed files, although it takes a while to run).
-
-For the frontend run `make jslint` before committing. 
-
-For large changes submit a [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request)
-
-## Repository Structure
-
-- `Makefile`
-    - Defines various project level shell script utilities.
-- `README.md`
-- *`env-mindgames`*
-    - Built by `make init`. Your local python virtual environment.
-- `environment.yml`
-    - Package installs and machine configuration for use with `conda`.
-- `requirements.txt`
-    - Package installs for use with `pip`.
-- `.pylintrc`
-    - Defines flags to turn off or on for default pylint code checking.
-- `setup.py`
-- `scripts`
-    - `download_scenarios_survey.py`
-- `.server_settings`
-    - A configuration file to define settings for the FastAPI server in `src/api.py`
-- `config`
-    - Arguments for various pacakge executables.
-    - `llmllm.yaml`
-- `src`
-    - `data`
-        - `payoffs`
-            - A variety of files of payoff matricies generated by `src/mindgames/make_games`.
-        - `scenarios.jsonl`
-            - The cover stories (scenarios) for use in the games.
-            - Do not edit manually. Instead run, `scripts/download_scenarios_survey.py` to update from the web.
-        - `survey.jsonl`
-            - The survey questions to use in the games.
-            - Do not edit manually. Instead run, `scripts/download_scenarios_survey.py` to update from the web.            
-    - `mindgames`
-        - `classify_messages.py`
-        - `game.py`
-        - `known_models.py`
-        - `make_games.py`
-        - `model.py`
-        - `play_rational_target.py`        
-        - `query_models.py`
-        - `run_game.py`
-        - `utils.py`
-    - `api`
-        - `api.py`
-        - `message_processing.py`
-        - `sql_model.py`
-        - `sql_queries.py`
-        - `utils.py`
-    - `experiments`
-        - `llmllm.py`
-        - `utils.py`
-    - `tests`
-        - `mindgames`
-            - ...
-        - `api`
-            - ...
-        - `experiments`
-            - ...
-        - `.pytest.ini`
 
 ### Bibtex
 
@@ -277,9 +101,14 @@ For large changes submit a [pull request](https://docs.github.com/en/pull-reques
 @misc{moore_large_2025,
     title = {Do Large Language Models Have a Planning Theory of Mind? Evidence from MINDGAMES: a Multi-Step Persuasion Task},
     shorttitle = {MINDGAMES},
-    publisher = {arXiv},
+    url = {http://arxiv.org/abs/2507.16196},
+    publisher = {Second Conference on Language Modeling},
     author = {Moore, Jared and Cooper, Ned and Overmark, Rasmus and Cibralic, Beba and Jones, Cameron R. and Haber, Nick},
     year = {2025},
 }
 ```
-```
+
+## Set up
+
+To run our code or reproduce our experiments, please read our [SETUP](/SETUP.md) page.
+
