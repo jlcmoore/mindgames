@@ -10,7 +10,7 @@
 
 This is the repository for the paper [Do Large Language Models Have a Planning Theory of Mind? Evidence from MINDGAMES: a Multi-Step Persuasion Task](http://arxiv.org/abs/2507.16196), which appeared at the Conference on Language Modeling in 2025.
 
-Here is a demo of our task: <https://mindgames.camrobjones.com>
+Here is a demo of our task: <https://mindgames.psych-experiments.com>
 
 *Interactive, planning-based Theory of Mind and persuasion tasks.*
 
